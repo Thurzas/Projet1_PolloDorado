@@ -5,6 +5,7 @@
 body {
     background-image: url(../img/fond-ecran.png);
     margin: 0;
+    font-family: Orbitron;
 }
 
 header {
@@ -15,40 +16,85 @@ header {
     color: white;
 }
 
-div {
+.navMenus {
 
-    nav {
+    ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        gap: 5rem;
+        padding-right: 3rem;
 
-        ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            gap: 5rem;
-            padding-right: 3rem;
-
-            a {
-                text-decoration: none;
-                color: var(--primary-color);
-            }
-
-            a:hover {
-                /*text-decoration-line: overline underline;*/
-                /*box-shadow: 0 5px 5px #ffbf01ff;*/
-                border: 1px solid var(--primary-color);
-                border-left: none;
-                border-right: none;
-                font-size: 105%;
-                /*box-shadow: 0 5px 5px #ffbf01ff;*/
-            }
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
         }
 
-        hr {
-            width: 80%;
-            margin-bottom: 50px;
+        a:hover {
+            /*text-decoration-line: overline underline;*/
+            /*box-shadow: 0 5px 5px #ffbf01ff;*/
+            border: 1px solid var(--primary-color);
+            border-left: none;
+            border-right: none;
+            /*box-shadow: 0 5px 5px #ffbf01ff;*/
         }
+    }
+
+    hr {
+        width: 80%;
     }
 }
 
-.bandeau {
-    color: white;
+.filAriane{
+    display: flex;
+    color: var(--primary-color);
+
+    ul {
+        display: flex;
+        list-style: none;
+        gap: 5px;
+        font-size: 80%;
+        margin-left: 150px;
+        margin-bottom: 50px;
+    }
+
+    li:not(:last-child)::after {
+        display: inline-block;
+        margin: 0 .25rem;
+        content: "→";
+      }
+
+    a {
+        text-decoration: none;
+        color: var(--primary-color)
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+.bandeauMenus {
+    display: flex;
+    justify-content: center;
+    background-image: url('../img/stars.jpg');
+    box-shadow: 10px 10px 100px var(--primary-color);
+    border: 3px solid var(--primary-color);
+    border-radius: 50px;
+    width: 80%;
+
+    div {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        color: white;
+        text-align: center;
+        line-height: 1px;
+        font-size: 1.5rem;
+
+        img {
+            width: 70%;
+        }
+    }
 }
