@@ -116,7 +116,7 @@ section
 {
     color:#ffbf01ff;
     position: absolute;
-    top: 0%;
+    top: 35%;
     left: 45%;
     z-index: 1;
     margin: auto;
@@ -150,7 +150,7 @@ section
 @keyframes title {
     0% {
         width: 18em;        
-        transform: scale(9.75);
+        transform: scale(2.75);
         opacity: 1;
     }
     50% {
