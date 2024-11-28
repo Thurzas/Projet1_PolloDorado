@@ -1,0 +1,54 @@
+:root {
+    --primary-color:  #26BBE2;
+}
+
+body {
+    background-image: url(../img/fond-ecran.png);
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: #3f3838;
+    padding: 5px;
+    color: white;
+}
+
+div {
+
+    nav {
+
+        ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 5rem;
+            padding-right: 3rem;
+
+            a {
+                text-decoration: none;
+                color: var(--primary-color);
+            }
+
+            a:hover {
+                /*text-decoration-line: overline underline;*/
+                /*box-shadow: 0 5px 5px #ffbf01ff;*/
+                border: 1px solid var(--primary-color);
+                border-left: none;
+                border-right: none;
+                font-size: 105%;
+                /*box-shadow: 0 5px 5px #ffbf01ff;*/
+            }
+        }
+
+        hr {
+            width: 80%;
+            margin-bottom: 50px;
+        }
+    }
+}
+
+.bandeau {
+    color: white;
+}
