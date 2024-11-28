@@ -1,8 +1,6 @@
 window.addEventListener('load', () => {
     const manager = new SketchyManager();
 
-    manager.addElement(document.getElementById('Sketchy'));
-    console.log(document.getElementById('Sketchy'));
     document.querySelectorAll('.SketchyTitle').forEach(title => {
         if(title!== null || title !== undefined) {
             manager.addElement(title);
@@ -46,7 +44,7 @@ class SketchyStrategyFactory {
         console.log(element);
         if(element.classList.contains('SketchyTitle'))
         {
-            return new SketchyTitle(element, '../fonts/Orbitron-VariableFont_wght.ttf', 'black', '#ffbf01ff');
+            return new SketchyTitle(element, './assets/fonts/Orbitron-VariableFont_wght.ttf', 'black', '#ffbf01ff');
         }
 
         return new DefaultSketchy(element);
@@ -112,7 +110,7 @@ class SketchyTitle extends SketchyStrategy
     }
     draw() {
     
-        const svg = this.createOrGetSVG();
+        const svg = this.createOrGetSVG(); // récupère le svg 
         svg.innerHTML = '';
     
         // Taille de l'élément
@@ -127,7 +125,7 @@ class SketchyTitle extends SketchyStrategy
         svg.style.left = '0';
         svg.style.zIndex = '1'; // Appliquer un z-index pour le placement correct
         this.element.style.color = "transparent"; //on invisibilise le texte pour garder sa taille physique.
-    
+        
         // Charge la police de manière asynchrone
         fetch(this.police)
             .then(response => response.arrayBuffer())
@@ -139,43 +137,53 @@ class SketchyTitle extends SketchyStrategy
                 let Y = height * 0.75; // Position de départ en Y
                 const letterSpacing = 5; // Espacement des lettres
                 let fontSize = parseInt(getComputedStyle(this.element).fontSize, 10); 
-    
+                
                 // Ajuste la taille pour que le texte s'inscrive dans le conteneur
                 const scaleFactor = Math.min(
                     width / (phrase.length * font.unitsPerEm), // Facteur basé sur la largeur
                     height / font.unitsPerEm // Facteur basé sur la hauteur
                 );
+
+                let offsetX = fontSize*scaleFactor*0.5; // Décalage en X pour la glyphe intérieure
+                let offsetY = fontSize*scaleFactor*0.5; // Décalage en Y pour la glyphe intérieure
                 fontSize = scaleFactor * font.unitsPerEm;
     
                 if (phrase !== undefined && phrase.length > 0) {
                     for (let i = 0; i < phrase.length; i++) {
                         const glyph = font.charToGlyph(phrase[i]);
-                        if (phrase[i] !== " ") {
-    
-                            // Génération du chemin SVG
-                            let svgPathData = glyph.getPath(X, Y, fontSize).toSVG();
-                            svgPathData = svgPathData.match(/d="([^"]+)"/)[1];
-    
-                            const pathOUT = document.createElementNS(svgNS, "path");
-                            path.setAttribute("d", svgPathData);
-                            path.setAttribute("fill", colorIn);
-                            path.setAttribute("transform", scale(1.25));
-                            svg.appendChild(path);
-
-                            const pathIN = document.createElementNS(svgNS, "path");
-                            path.setAttribute("d", svgPathData);
-                            path.setAttribute("fill", colorIn);
-                            svg.appendChild(path);
-
-
+                        const metrics = glyph.getMetrics();
+                    
+                        const scale = fontSize / font.unitsPerEm;
+                        const offsetX = metrics.leftSideBearing * scale + scale; // Alignement horizontal
+                        const offsetY = (metrics.yMax - metrics.yMin) * scale * 0.075; // Alignement vertical ajusté
+                
+                        // Génération des chemins SVG
+                        const outerGlyph = glyph.getPath(X, Y, fontSize).toSVG();
+                        const innerGlyph = glyph.getPath(X + offsetX, Y - offsetY, fontSize * 0.85).toSVG();
+                        const strokeWidth = 0.2*fontSize; 
+                        if (phrase[i] !== " ") {   
+                            const outerPath = outerGlyph.match(/d="([^"]+)"/)[1];
+                            const innerPath = innerGlyph.match(/d="([^"]+)"/)[1];
+                            const pathOUT = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                            pathOUT.setAttribute("d", outerPath);
+                            pathOUT.setAttribute("fill", this.colorOut);
+                            pathOUT.setAttribute("stroke", this.colorOut);
+                            pathOUT.setAttribute("stroke-width", strokeWidth);
+                            svg.appendChild(pathOUT);
+                    
+                            const pathIN = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                            pathIN.setAttribute("d", innerPath);
+                            pathIN.setAttribute("fill", this.colorIn);
+                            pathIN.setAttribute("stroke", this.colorIn);
+                            pathIN.setAttribute("stroke-width", strokeWidth*0.5);
+                            svg.appendChild(pathIN);
+                    
                             // Ajuste la position X pour le prochain glyphe
-                            X += (glyph.advanceWidth * fontSize / font.unitsPerEm) + letterSpacing;
+                            X += (glyph.advanceWidth * scale) + letterSpacing;
+                        } else {
+                            X += (glyph.advanceWidth * scale) + letterSpacing;
                         }
-                        else
-                        {
-                            X += (glyph.advanceWidth * fontSize / font.unitsPerEm) + letterSpacing;
-                        }
-                    }
+                    }                    
                 }
             })
         .catch(err => {

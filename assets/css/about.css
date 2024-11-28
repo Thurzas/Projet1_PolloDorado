@@ -7,10 +7,74 @@ body
 {
     width: 100vw;
     height: 100vh;
-    background-image: url("../img/stars-964022_1920.png");
-    overflow: hidden;
+    font-family: "Orbitron", serif;
+    font-optical-sizing: auto;
+    font-weight: 7;
+    font-style: normal;      
+    background-image: url("../img/stars-964022_1920.png");    
 }
 
+
+#outro
+{
+    color:white;
+    h1,h2{
+        text-align: center;
+        margin:1rem auto;
+    } 
+    animation: pop-in 3s ease-in-out 360s forwards;
+    opacity: 0;
+    img
+    {
+        animation: pop-in 3s ease-in-out 60s forwards;
+        opacity: 0;    
+    }
+}
+#history
+{
+    color:white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:clamp(80%,600px,85%);
+    margin:0 auto;
+    top:10rem;
+    background-color: rgba(255,255,255,0.1);
+    article
+    {
+        flex-direction: column;
+        width:50%;
+        align-items: center;
+        img
+        {
+            display: block;
+            margin:0 auto;
+            animation: pop-in 3s ease-in-out 1s forwards;
+            opacity: 0;        
+        }
+    }
+    p
+    {
+        padding:2rem;
+    }
+}
+
+@keyframes pop-in {
+    20% {
+        top:5rem;
+        opacity: 1;
+    }
+    100% {
+        top:5rem;
+        opacity: 1;
+    }
+
+}
+
+section
+{
+    margin-top:10rem;
+}
 .intro
 {
     position:absolute;
@@ -19,7 +83,7 @@ body
     z-index: 2;
     h2{
         color:#26BBE2;
-        font-size: 300%;
+        font-size: 600;
     }    
     animation: intro 6s ease-out 1s;
     opacity: 0;
@@ -43,14 +107,32 @@ body
 {
     color:#ffbf01ff;
     position: absolute;
-    top: 45%;
-    left: 47%;
+    top: 23%;
+    left: 45%;
     z-index: 1;
     margin: auto;
     animation: title 9s ease-out 9s;
     opacity: 0;
+    h2
+    {
+        margin: 2rem auto;
+    }
 }
 
+.slider
+{
+    display: flex;
+    justify-content: space-around;
+    width:90%;
+    margin:0 auto;
+    img
+    {   
+        aspect-ratio: 1;
+        max-width: 30vw;
+        animation: pop-in 3s ease-in-out 60s forwards;
+        opacity: 0;    
+    }
+}
 @keyframes title {
     0% {
         width: 18em;        
@@ -70,18 +152,20 @@ body
 
 #board {
     font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    transform: perspective(300px) rotateX(25deg);
+    transform: perspective(30vh) rotateX(15deg);
     transform-origin: 50% 100%;
-    text-align: justify;
     position: absolute;
     margin-left: -9em;
     font-weight: bold;
     overflow: hidden;
-    font-size: 350%;
+    font-size: 550%;    
     height: 50em;
     width: 18em;
     bottom: 0;
     left: 50%;
+    p,h2,h3{
+        font-size: 3em;
+    }
   }
   
   #board:after {    
@@ -93,9 +177,8 @@ body
     top: 0;
   }
   
-  /* Set the scrolling animation and position it */
   #content {
-    animation: scroll 100s linear 16s;
+    animation: scroll 280s linear 16s;
     position: absolute;
     top: 100%;
     color:#ffbf01ff;
@@ -117,3 +200,4 @@ body
           top: -170%;
       }
   }
+  
