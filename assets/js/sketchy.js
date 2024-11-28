@@ -1,3 +1,5 @@
+const orange = '#ffbf01ff';
+const cyan = '#26BBE2';
 window.addEventListener('load', () => {
     const manager = new SketchyManager();
 
@@ -44,9 +46,31 @@ class SketchyStrategyFactory {
         console.log(element);
         if(element.classList.contains('SketchyTitle'))
         {
-            return new SketchyTitle(element, './assets/fonts/Orbitron-VariableFont_wght.ttf', 'black', '#ffbf01ff');
+            if(element.classList.contains('cyan'))
+            {
+                return new SketchyTitle(element, './assets/fonts/Orbitron-VariableFont_wght.ttf', 'black', cyan);
+            }
+            else if(element.classList.contains('orange'))
+            {
+                return new SketchyTitle(element, './assets/fonts/Orbitron-VariableFont_wght.ttf', 'black', orange);
+            }
+            else
+            {
+                return new SketchyTitle(element, './assets/fonts/Orbitron-VariableFont_wght.ttf', 'black', 'white');
+            }            
         }
 
+        if(element.classList.contains('SketchyLabel'))
+        {
+            if(element.classList.contains('inversed'))
+            {
+                return new SketchyLabel(element, 'black', 'white');
+            }
+            else
+            {
+                return new SketchyLabel(element, 'white', 'black');                
+            }
+        }
         return new DefaultSketchy(element);
     }
 }
@@ -70,6 +94,11 @@ class SketchyManager {
 }
 // --- Stratégie pour les labels ---
 class LabelSketch extends SketchyStrategy {
+    constructor(element, color, background) {
+        super(element);
+        this.color=color;
+        this.background = background;
+    }
     draw() {
         const input = document.getElementById(this.element.htmlFor);
         if (!input) return; // Si aucun input associé, rien à faire
@@ -90,7 +119,7 @@ class LabelSketch extends SketchyStrategy {
         // Dessine une bordure esquissée autour de l'input
         const sketchyRect = rc.rectangle(
             10, 10, input.offsetWidth, input.offsetHeight,
-            { roughness: 2.5, bowing: 1.5, stroke: '#333', strokeWidth: 2 }
+            { roughness: 2.5, bowing: 1.5, stroke: this.color, strokeWidth: 2 }
         );
         svg.appendChild(sketchyRect);
     }

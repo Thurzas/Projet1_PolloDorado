@@ -12,24 +12,34 @@ body
     font-weight: 7;
     font-style: normal;      
     background-image: url("../img/stars-964022_1920.png");    
+    overflow: hidden;
 }
-
 
 #outro
 {
+    svg
+    {
+        position: absolute;
+        pointer-events: none; 
+        top:0;
+        left:0;
+    }
     color:white;
     h1,h2{
+        width:fit-content;
         text-align: center;
         margin:1rem auto;
+        font-size: 3em;
     } 
-    animation: pop-in 3s ease-in-out 360s forwards;
+    animation: pop-in 3s ease-in-out 135s forwards;
     opacity: 0;
     img
     {
-        animation: pop-in 3s ease-in-out 60s forwards;
+        animation: pop-in 3s ease-in-out 135s forwards;
         opacity: 0;    
     }
 }
+
 #history
 {
     color:white;
@@ -49,7 +59,6 @@ body
         {
             display: block;
             margin:0 auto;
-            animation: pop-in 3s ease-in-out 1s forwards;
             opacity: 0;        
         }
     }
@@ -107,7 +116,7 @@ section
 {
     color:#ffbf01ff;
     position: absolute;
-    top: 23%;
+    top: 0%;
     left: 45%;
     z-index: 1;
     margin: auto;
@@ -115,28 +124,33 @@ section
     opacity: 0;
     h2
     {
+        color:#ffbf01ff;
         margin: 2rem auto;
     }
 }
 
 .slider
 {
-    display: flex;
-    justify-content: space-around;
     width:90%;
     margin:0 auto;
+    ul
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
     img
     {   
         aspect-ratio: 1;
         max-width: 30vw;
-        animation: pop-in 3s ease-in-out 60s forwards;
+        animation: pop-in 3s ease-in-out 135s forwards;
         opacity: 0;    
     }
 }
 @keyframes title {
     0% {
         width: 18em;        
-        transform: scale(2.75);
+        transform: scale(9.75);
         opacity: 1;
     }
     50% {
@@ -163,6 +177,12 @@ section
     width: 18em;
     bottom: 0;
     left: 50%;
+
+    h2,h3
+    {
+        text-align: center;
+        margin-top: 20px;
+    }
     p,h2,h3{
         font-size: 3em;
     }
@@ -178,7 +198,7 @@ section
   }
   
   #content {
-    animation: scroll 280s linear 16s;
+    animation: scroll 180s linear 16s;
     position: absolute;
     top: 100%;
     color:#ffbf01ff;
