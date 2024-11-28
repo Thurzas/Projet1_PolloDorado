@@ -159,7 +159,7 @@ class SketchyTitle extends SketchyStrategy
         fetch(this.police)
             .then(response => response.arrayBuffer())
             .then(buffer => {
-                const phrase = this.text;
+                const phrase = this.text.toUpperCase();
                 const font = opentype.parse(buffer);    
     
                 let X = 0; // Position de départ en X
