@@ -1,0 +1,119 @@
+*
+{
+    margin:0;
+    padding: 0;
+}
+body
+{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../img/stars-964022_1920.png");
+    overflow: hidden;
+}
+
+.intro
+{
+    position:absolute;
+    top:45%;
+    left:35%;
+    z-index: 2;
+    h2{
+        color:#26BBE2;
+        font-size: 300%;
+    }    
+    animation: intro 6s ease-out 1s;
+    opacity: 0;
+}
+@keyframes intro {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#title
+{
+    color:#ffbf01ff;
+    position: absolute;
+    top: 45%;
+    left: 47%;
+    z-index: 1;
+    margin: auto;
+    animation: title 9s ease-out 9s;
+    opacity: 0;
+}
+
+@keyframes title {
+    0% {
+        width: 18em;        
+        transform: scale(2.75);
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+        width: 18em;      
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.1);
+        width: 18em;
+    }
+}
+
+#board {
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    transform: perspective(300px) rotateX(25deg);
+    transform-origin: 50% 100%;
+    text-align: justify;
+    position: absolute;
+    margin-left: -9em;
+    font-weight: bold;
+    overflow: hidden;
+    font-size: 350%;
+    height: 50em;
+    width: 18em;
+    bottom: 0;
+    left: 50%;
+  }
+  
+  #board:after {    
+    position: absolute;
+    content: ' ';
+    bottom: 60%;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+  
+  /* Set the scrolling animation and position it */
+  #content {
+    animation: scroll 100s linear 16s;
+    position: absolute;
+    top: 100%;
+    color:#ffbf01ff;
+    font-size: 34px;
+    p
+    {
+        margin: 2rem 2rem;
+    }
+    h3
+    {
+        margin:auto 2rem;
+    }
+  }
+  @keyframes scroll {
+      0% {
+          top: 100%;
+      }
+      100% {
+          top: -170%;
+      }
+  }
