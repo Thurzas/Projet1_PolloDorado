@@ -92,7 +92,7 @@ section
     z-index: 2;
     h2{
         color:#26BBE2;
-        font-size: 600;
+        font-size: 300%;
     }    
     animation: intro 6s ease-out 1s;
     opacity: 0;
@@ -166,18 +166,18 @@ section
 
 #board {
     font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    transform: perspective(30vh) rotateX(15deg);
+    transform: perspective(300px) rotateX(25deg);
     transform-origin: 50% 100%;
+    text-align: justify;
     position: absolute;
     margin-left: -9em;
     font-weight: bold;
     overflow: hidden;
-    font-size: 550%;    
+    font-size: 350%;
     height: 50em;
     width: 18em;
     bottom: 0;
     left: 50%;
-
     h2,h3
     {
         text-align: center;
@@ -197,6 +197,7 @@ section
     top: 0;
   }
   
+  /* Set the scrolling animation and position it */
   #content {
     animation: scroll 180s linear 16s;
     position: absolute;
@@ -220,4 +221,3 @@ section
           top: -170%;
       }
   }
-  
