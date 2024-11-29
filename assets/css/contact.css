@@ -4,12 +4,12 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: "Orbitron", sans-serif;;
+    font-family: "Orbitron", sans-serif;
     
 }
 
 body {
-    background-image: url("assets/img/fond.png");
+    background-image: url("../img/fond.png");
     height: 100vh;
 }
 
