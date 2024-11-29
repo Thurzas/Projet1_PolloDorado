@@ -165,7 +165,7 @@ class SketchyTitle extends SketchyStrategy
                 let X = 0; // Position de départ en X
                 let Y = height * 0.75; // Position de départ en Y
                 const letterSpacing = 5; // Espacement des lettres
-                let fontSize = parseInt(getComputedStyle(this.element).fontSize, 10); 
+                let fontSize = parseInt(getComputedStyle(this.element).fontSize); 
                 
                 // Ajuste la taille pour que le texte s'inscrive dans le conteneur
                 const scaleFactor = Math.min(
@@ -189,7 +189,7 @@ class SketchyTitle extends SketchyStrategy
                         // Génération des chemins SVG
                         const outerGlyph = glyph.getPath(X, Y, fontSize).toSVG();
                         const innerGlyph = glyph.getPath(X + offsetX, Y - offsetY, fontSize * 0.85).toSVG();
-                        const strokeWidth = 0.2*fontSize; 
+                        const strokeWidth = 0.25*fontSize; 
                         if (phrase[i] !== " ") {   
                             const outerPath = outerGlyph.match(/d="([^"]+)"/)[1];
                             const innerPath = innerGlyph.match(/d="([^"]+)"/)[1];
