@@ -92,6 +92,7 @@ main {
         background-repeat: no-repeat;
 
         p{
+            height:fit-content;
             background-image: url(../img/background.png);
             max-height: fit-content;
             color: rgb(255, 0, 0);
