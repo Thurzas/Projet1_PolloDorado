@@ -31,11 +31,11 @@ body
         margin:1rem auto;
         font-size: 3em;
     } 
-    animation: pop-in 3s ease-in-out 135s forwards;
+    animation: pop-in 3s ease-in-out 123s forwards;
     opacity: 0;
     img
     {
-        animation: pop-in 3s ease-in-out 135s forwards;
+        animation: pop-in 3s ease-in-out 123s forwards;
         opacity: 0;    
     }
 }
@@ -116,10 +116,9 @@ section
 {
     color:#ffbf01ff;
     position: absolute;
-    top: 35%;
+    top: 15%;
     left: 45%;
     z-index: 1;
-    margin: auto;
     animation: title 9s ease-out 9s;
     opacity: 0;
     h2
@@ -143,7 +142,7 @@ section
     {   
         aspect-ratio: 1;
         max-width: 30vw;
-        animation: pop-in 3s ease-in-out 135s forwards;
+        animation: pop-in 3s ease-in-out 123s forwards;
         opacity: 0;    
     }
 }
@@ -166,16 +165,16 @@ section
 
 #board {
     font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    transform: perspective(300px) rotateX(25deg);
+    transform: perspective(800px) rotateX(35deg);
     transform-origin: 50% 100%;
     text-align: justify;
     position: absolute;
-    margin-left: -9em;
+    margin-left: -14em;
     font-weight: bold;
     overflow: hidden;
     font-size: 350%;
     height: 50em;
-    width: 18em;
+    width: 29em;
     bottom: 0;
     left: 50%;
     h2,h3
@@ -184,7 +183,7 @@ section
         margin-top: 20px;
     }
     p,h2,h3{
-        font-size: 3em;
+        font-size: 2.7em;
     }
   }
   
@@ -218,6 +217,6 @@ section
           top: 100%;
       }
       100% {
-          top: -170%;
+          top: -370%;
       }
   }
