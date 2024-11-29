@@ -149,7 +149,7 @@ section
 @keyframes title {
     0% {
         width: 18em;        
-        transform: scale(9.75);
+        transform: scale(2.75);
         opacity: 1;
     }
     50% {
@@ -167,6 +167,7 @@ section
     font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
     transform: perspective(800px) rotateX(35deg);
     transform-origin: 50% 100%;
+    text-align: justify;
     position: absolute;
     margin-left: -14em;
     font-weight: bold;
