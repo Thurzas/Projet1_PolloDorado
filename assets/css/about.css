@@ -15,6 +15,7 @@ body
     overflow: hidden;
 }
 
+
 #outro
 {
     svg
@@ -86,6 +87,10 @@ section
 }
 .intro
 {
+    audio
+    {
+        visibility:hidden;
+    }
     position:absolute;
     top:45%;
     left:35%;
@@ -167,7 +172,6 @@ section
     font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
     transform: perspective(800px) rotateX(35deg);
     transform-origin: 50% 100%;
-    text-align: justify;
     position: absolute;
     margin-left: -14em;
     font-weight: bold;
