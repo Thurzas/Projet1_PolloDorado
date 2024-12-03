@@ -5,19 +5,75 @@
 }
 body
 {
-    width: 100vw;
-    height: 100vh;
     font-family: "Orbitron", serif;
     font-optical-sizing: auto;
     font-weight: 7;
     font-style: normal;      
-    background-image: url("../img/stars-964022_1920.png");    
+    background-image: url("../img/stars-964022_1920.png");
+    background-position: fixed;
     overflow: hidden;
+    animation : unlockBody 3s ease-in-out 123s forwards;
 }
 
-
+#abort
+{
+    position:absolute;
+    top:0;
+    left:95%;
+    color:white;
+    border:transparent;
+    background-color: transparent;
+    font-size: 67px;
+    width:fit-content;
+    height:fit-content;
+    
+}
+.VS
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 30%;
+    font-size: 64px;    
+}
+.slider
+{
+    position:relative;
+    overflow: hidden;
+    width:90%;
+    margin:0 auto;
+}
+.content
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    overflow: hidden;
+    width:100%;    
+    transition: transform 1.5s ease-in-out;
+    will-change: transform;
+    li
+    {
+        float: left;
+        width:33%;
+        transition: transform 1.5s left 0.5s ease-in-out;
+        opacity: 0;
+        &:nth-child(3), &:nth-child(4), &:nth-child(5)
+        {
+            opacity: 1;
+        }
+        img{
+            opacity: inherit;
+            aspect-ratio: 1;
+            max-width: 30vw;  
+            box-sizing: border-box; 
+        }
+    }
+}
 #outro
 {
+    top:0;
     svg
     {
         position: absolute;
@@ -32,15 +88,52 @@ body
         margin:1rem auto;
         font-size: 3em;
     } 
-    animation: pop-in 3s ease-in-out 123s forwards;
-    opacity: 0;
-    img
-    {
-        animation: pop-in 3s ease-in-out 123s forwards;
-        opacity: 0;    
-    }
+    ;
 }
 
+.unlockBody
+{
+    animation : unlockBody 3s ease-in-out 3s forwards;
+}
+@keyframes unlockBody {
+    0%
+    {
+        overflow: scroll;
+    }
+    100%
+    {
+        overflow-wrap:scroll;
+    }
+}
+.pop-in{
+    opacity: 0;
+    animation : pop-in 3s ease-in-out 123s forwards;
+}
+@keyframes pop-in {
+    20% {
+        top:5rem;
+        opacity: 1;
+    }
+    100% {
+        top:5rem;
+        opacity: 1;
+    }
+
+}
+.pop-in-now{
+    opacity: 0;
+    animation : pop-in 3s ease-in-out 3s forwards;
+}
+@keyframes pop-in-now {
+    20% {
+        top:5rem;
+        opacity: 1;
+    }
+    100% {
+        top:5rem;
+        opacity: 1;
+    }
+}
 #history
 {
     color:white;
@@ -59,8 +152,7 @@ body
         img
         {
             display: block;
-            margin:0 auto;
-            opacity: 0;        
+            margin:0 auto;    
         }
     }
     p
@@ -69,23 +161,64 @@ body
     }
 }
 
-@keyframes pop-in {
-    20% {
-        top:5rem;
-        opacity: 1;
-    }
-    100% {
-        top:5rem;
-        opacity: 1;
-    }
-
-}
-
-section
+.team-content
 {
-    margin-top:10rem;
+    width:90%;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(255,255,255,0.1);
+    color:white;
+    margin:0 auto;
+    article
+    {
+        vertical-align: middle;
+    }
 }
-.intro
+
+#team
+{
+    width:90%;
+    gap:1rem;
+    margin:6rem auto;
+    color:white;
+}
+#rebels
+{
+    padding:1rem;
+    h2
+    {
+        font-size: 34px;
+        padding:2rem;
+    }
+    img{
+        width:clamp(250px,15%,275px);
+    }
+
+}
+#siths
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 60px, repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; 
+
+    h2{
+        font-size: 34px;
+
+    }
+    img{
+        width:clamp(200px,15%,250px);
+    }
+    h2
+    {
+        grid-area: 1 / 1 / 2 / 4;
+        padding:2rem;
+    }
+
+}
+
+#intro
 {
     audio
     {
@@ -94,13 +227,13 @@ section
     position:absolute;
     top:45%;
     left:35%;
+    opacity: 0;
     z-index: 2;
     h2{
         color:#26BBE2;
         font-size: 300%;
     }    
     animation: intro 6s ease-out 1s;
-    opacity: 0;
 }
 @keyframes intro {
     0% {
@@ -133,24 +266,6 @@ section
     }
 }
 
-.slider
-{
-    width:90%;
-    margin:0 auto;
-    ul
-    {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-    img
-    {   
-        aspect-ratio: 1;
-        max-width: 30vw;
-        animation: pop-in 3s ease-in-out 123s forwards;
-        opacity: 0;    
-    }
-}
 @keyframes title {
     0% {
         width: 18em;        
