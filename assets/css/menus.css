@@ -22,7 +22,7 @@ main {
     align-items: center;
 
     h2 {
-        color: var(--primary-color);
+        color: #ffbf01ff;
     }
 }
 
@@ -130,6 +130,126 @@ main {
     opacity: 1;
 }
 
+.menuMenusBucket1:hover .imgHover {
+    opacity: 0;
+}
+
+.menuMenusBucket1:hover .textContent {
+    opacity: 1;
+}
+
+.menuMenusBucket2:hover .imgHover {
+    opacity: 0;
+}
+
+.menuMenusBucket2:hover .textContent {
+    opacity: 1;
+}
+
+.menuMenusBucket3:hover .imgHover {
+    opacity: 0;
+}
+
+.menuMenusBucket3:hover .textContent {
+    opacity: 1;
+}
+
+.menuMenusPadawans1:hover .imgHover {
+    opacity: 0;
+}
+
+.menuMenusPadawans1:hover .textContent {
+    opacity: 1;
+}
+
+.menuMenusPadawans2:hover .imgHover {
+    opacity: 0;
+}
+
+.menuMenusPadawans2:hover .textContent {
+    opacity: 1;
+}
+
+.menuMenusPadawans3:hover .imgHover {
+    opacity: 0;
+}
+
+.menuMenusPadawans3:hover .textContent {
+    opacity: 1;
+}
+
+.menuMenusPadawans4:hover .imgHover {
+    opacity: 0;
+}
+
+.menuMenusPadawans4:hover .textContent {
+    opacity: 1;
+}
+
+.burgerPoulet1:hover .imgHover {
+    opacity: 0;
+}
+
+.burgerPoulet1:hover .textContent {
+    opacity: 1;
+}
+
+.burgerPoulet2:hover .imgHover {
+    opacity: 0;
+}
+
+.burgerPoulet2:hover .textContent {
+    opacity: 1;
+}
+
+.burgerPoulet3:hover .imgHover {
+    opacity: 0;
+}
+
+.burgerPoulet3:hover .textContent {
+    opacity: 1;
+}
+
+.burgerPoulet4:hover .imgHover {
+    opacity: 0;
+}
+
+.burgerPoulet4:hover .textContent {
+    opacity: 1;
+}
+
+.burgerVege1:hover .imgHover {
+    opacity: 0;
+}
+
+.burgerVege1:hover .textContent {
+    opacity: 1;
+}
+
+.burgerVege2:hover .imgHover {
+    opacity: 0;
+}
+
+.burgerVege2:hover .textContent {
+    opacity: 1;
+}
+
+.burgerVege3:hover .imgHover {
+    opacity: 0;
+}
+
+.burgerVege3:hover .textContent {
+    opacity: 1;
+}
+
+.burgerVege4:hover .imgHover {
+    opacity: 0;
+}
+
+.burgerVege4:hover .textContent {
+    opacity: 1;
+}
+
 .button-starwars {
     margin: 10px 0px;
     background-image: url(../img/background.png); /* Fond noir */
@@ -220,7 +340,7 @@ main {
 .bandeauMenus {
     display: flex;
     justify-content: center;
-    background-image: url('../img/stars.jpg');
+    background-image: url('../img/background.jpg');
     box-shadow: 10px 10px 100px var(--primary-color);
     border: 3px solid var(--primary-color);
     border-radius: 50px;
@@ -274,6 +394,9 @@ main {
 }
 
 .nouv1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-image: url('../img/stars.jpg');
     box-shadow: 10px 10px 100px var(--primary-color);
     border: 3px solid var(--primary-color);
@@ -440,6 +563,186 @@ main {
 }
 
 .menuMenusBurger4 {
+    background-image: url('../img/stars.jpg');
+    box-shadow: 10px 10px 100px var(--primary-color);
+    border: 3px solid var(--primary-color);
+    border-radius: 50px;
+    text-align: center;
+
+    img {
+        width: 100%;
+    }
+}
+
+.menuMenusBucket {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 80%;
+    gap: 50px;
+
+    h3 {
+        color: white;
+    }
+}
+
+.menuMenusBucket1 {
+    background-image: url('../img/stars.jpg');
+    box-shadow: 10px 10px 100px var(--primary-color);
+    border: 3px solid var(--primary-color);
+    border-radius: 50px;
+    text-align: center;
+
+    img {
+        width: 100%;
+    }
+}
+
+.menuMenusBucket2 {
+    background-image: url('../img/stars.jpg');
+    box-shadow: 10px 10px 100px var(--primary-color);
+    border: 3px solid var(--primary-color);
+    border-radius: 50px;
+    text-align: center;
+
+    img {
+        width: 100%;
+    }
+}
+
+.menuMenusBucket3 {
+    background-image: url('../img/stars.jpg');
+    box-shadow: 10px 10px 100px var(--primary-color);
+    border: 3px solid var(--primary-color);
+    border-radius: 50px;
+    text-align: center;
+
+    img {
+        width: 100%;
+    }
+}
+
+.menuMenusBucket4 {
+    background-image: url('../img/stars.jpg');
+    box-shadow: 10px 10px 100px var(--primary-color);
+    border: 3px solid var(--primary-color);
+    border-radius: 50px;
+    text-align: center;
+
+    img {
+        width: 100%;
+    }
+}
+
+.menuMenusVegetarien {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 80%;
+    gap: 50px;
+
+    h3 {
+        color: white;
+    }
+}
+
+.menuMenusVege1 {
+    background-image: url('../img/stars.jpg');
+    box-shadow: 10px 10px 100px var(--primary-color);
+    border: 3px solid var(--primary-color);
+    border-radius: 50px;
+    text-align: center;
+
+    img {
+        width: 100%;
+    }
+}
+
+.menuMenusVege2 {
+    background-image: url('../img/stars.jpg');
+    box-shadow: 10px 10px 100px var(--primary-color);
+    border: 3px solid var(--primary-color);
+    border-radius: 50px;
+    text-align: center;
+
+    img {
+        width: 100%;
+    }
+}
+
+.menuMenusVege3 {
+    background-image: url('../img/stars.jpg');
+    box-shadow: 10px 10px 100px var(--primary-color);
+    border: 3px solid var(--primary-color);
+    border-radius: 50px;
+    text-align: center;
+
+    img {
+        width: 100%;
+    }
+}
+
+.menuMenusVege4 {
+    background-image: url('../img/stars.jpg');
+    box-shadow: 10px 10px 100px var(--primary-color);
+    border: 3px solid var(--primary-color);
+    border-radius: 50px;
+    text-align: center;
+
+    img {
+        width: 100%;
+    }
+}
+
+.menuMenusPadawans {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 80%;
+    gap: 50px;
+
+    h3 {
+        color: white;
+    }
+}
+
+.menuMenusPadawans1 {
+    background-image: url('../img/stars.jpg');
+    box-shadow: 10px 10px 100px var(--primary-color);
+    border: 3px solid var(--primary-color);
+    border-radius: 50px;
+    text-align: center;
+
+    img {
+        width: 100%;
+    }
+}
+
+.menuMenusPadawans2 {
+    background-image: url('../img/stars.jpg');
+    box-shadow: 10px 10px 100px var(--primary-color);
+    border: 3px solid var(--primary-color);
+    border-radius: 50px;
+    text-align: center;
+
+    img {
+        width: 100%;
+    }
+}
+
+.menuMenusPadawans3 {
+    background-image: url('../img/stars.jpg');
+    box-shadow: 10px 10px 100px var(--primary-color);
+    border: 3px solid var(--primary-color);
+    border-radius: 50px;
+    text-align: center;
+
+    img {
+        width: 100%;
+    }
+}
+
+.menuMenusPadawans4 {
     background-image: url('../img/stars.jpg');
     box-shadow: 10px 10px 100px var(--primary-color);
     border: 3px solid var(--primary-color);
