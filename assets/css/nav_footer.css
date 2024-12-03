@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+:root {
+    --jaune: #ffbf01ff;
+    --blue: #26BBE2;
+}
+
+p {
+    color: white;
+}
+
+header{
+    nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 2rem 2rem 2rem;
+        margin-bottom: 320px;
+        @media (width > 980px){
+            align-items: flex-start;
+        }
+        figure {
+            margin-top: 2rem;
+            figcaption {
+                color: aliceblue;
+                margin: 0;
+            }
+        }
+        img {
+            width: fit-content;  
+            height: fit-content;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+            border-radius: 0.2rem;
+        }
+        .hover_nav:hover {
+            box-shadow: 0 0 10px #26bbe2, 0 0 20px #26bbe2; /* Effet néon */
+            transform: scale(1.05); /* Léger zoom au survol */
+            border-radius: 0.2rem;
+        }
+        #logo {
+            width: 100px;
+            @media (width > 980px){
+                width: 150px;
+                margin-top: 0;
+            }
+        }
+        ul {
+            position: absolute;
+            /* opacity: 0; */
+            margin-top: 8rem;
+            li {
+                color: var(--blue);
+                list-style-type: none;
+                font-size: 1.5em;
+                padding: 1rem;
+                transition: box-shadow 0.3s ease, transform 0.3s ease;
+            }
+            li:hover {
+                box-shadow: 0 0 10px #26bbe2, 0 0 20px #26bbe2; /* Effet néon */
+                transform: scale(1.05); /* Léger zoom au survol */
+                border-radius: 0.2rem;
+            }
+        }
+    }
+}
+
+footer {
+    padding: 1rem; 
+    #laser {
+        width: 30%;
+        display: block;
+        margin: 0 auto;
+        
+    }
+    #icon {
+        display: flex;
+        gap: 5rem;
+        justify-content: center;
+        margin: 3rem;
+        img {
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        img:hover {
+            box-shadow: 0 0 10px #26bbe2, 0 0 20px #26bbe2; /* Effet néon */
+            transform: scale(1.05); /* Léger zoom au survol */
+            border-radius: 0.2rem;
+        }
+    }
+    ul {
+        display: flex; 
+        justify-content: center;
+        gap: 3rem;
+        li {
+            color: white;
+            list-style: none;
+            font-size: 1.5em;
+            border-bottom: 1.5px solid var(--blue);
+            
+        }
+        li:hover {
+            box-shadow: 0 2px 0 #26bbe2, 0 2px 0 #26bbe2; /* Effet néon */
+            transform: scale(1.05); /* Léger zoom au survol */
+            border-radius: 0.2rem;
+        }
+    
+    }
+    p {
+        text-align: center;
+        margin-top: 2rem;
+    }
+}

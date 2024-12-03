@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 
 :root {
-    --jaune: #ffbf01ff
+    --jaune: #ffbf01ff;
+    --blue: #26BBE2;
 }
 
 
@@ -25,6 +26,7 @@ main {
     gap: 3rem;
         h1, h2 {
             color: var(--jaune);
+            font-size: xx-large;
         }
         .map {
             padding: 2rem;
@@ -80,3 +82,4 @@ section {
     align-items: center;
     gap: 3rem;
 }
+
