@@ -285,8 +285,8 @@ class SketchySlider extends SketchyStrategy
         {
             content.style.transition = "transform 0.5s ease-in-out";
             let dist = 100 / this.nbItemsToShow;
-            console.log(dist);
-            content.style.transform = "translateX(-33%)";            
+            console.log(Math.floor(dist));
+            content.style.transform = `translateX(-${Math.floor(dist)}%)`;            
             setTimeout(() => {
                 content.style.transition = "none";
                 content.append(items[0]); 
@@ -302,7 +302,8 @@ class SketchySlider extends SketchyStrategy
         if(items !== undefined && items.length > 0)
         {
             content.style.transition = "transform 0.5s ease-in-out";
-            content.style.transform = "translateX(33%)";            
+            let dist = 100 / this.nbItemsToShow;
+            content.style.transform = `translateX(${Math.floor(dist)}%)`;            
             setTimeout(() => {
                 content.style.transition = "none";
                 content.prepend(items[items.length - 1]);
