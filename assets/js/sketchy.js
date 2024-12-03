@@ -65,9 +65,16 @@ class SketchyStrategyFactory {
         }
         if(element.classList.contains('SketchySlider'))
         {
-            return new SketchySlider(element,true);
+            if(element.classList.contains('three'))
+            {
+                return new SketchySlider(element,true,3);                
+            }   
+            else
+            {
+                return new SketchySlider(element,true,1);
+            }
         }
-
+            
         if(element.classList.contains('SketchyLabel'))
         {
             if(element.classList.contains('inversed'))
@@ -232,9 +239,10 @@ class SketchyTitle extends SketchyStrategy
 //Slider strategy
 class SketchySlider extends SketchyStrategy
 {
-    constructor(element, autoSlide) {
+    constructor(element, autoSlide, nbItemsToShow) {
         super(element);
         this.autoSlide = autoSlide;
+        this.nbItemsToShow = nbItemsToShow;
     }
     draw()
     {                
@@ -272,8 +280,19 @@ class SketchySlider extends SketchyStrategy
     {
         const items = this.element.querySelectorAll('li');
         const content = this.element.querySelector('.content');
+
         if(items !== undefined && items.length > 0)
-        content.append(items[0]);        
+        {
+            content.style.transition = "transform 0.5s ease-in-out";
+            let dist = 100 / this.nbItemsToShow;
+            console.log(dist);
+            content.style.transform = "translateX(-33%)";            
+            setTimeout(() => {
+                content.style.transition = "none";
+                content.append(items[0]); 
+                content.style.transform = "translateX(0)"; 
+            }, 500);            
+        }
     }
 
     right()
@@ -281,14 +300,16 @@ class SketchySlider extends SketchyStrategy
         const items = this.element.querySelectorAll('li');
         const content = this.element.querySelector('.content');
         if(items !== undefined && items.length > 0)
-            content.prepend(items[items.length-1])
+        {
+            content.style.transition = "transform 0.5s ease-in-out";
+            content.style.transform = "translateX(33%)";            
+            setTimeout(() => {
+                content.style.transition = "none";
+                content.prepend(items[items.length - 1]);
+                content.style.transform = "translateX(0)"; 
+            }, 500);      
+        }
     }
-}
-
-class menuSlider extends SketchyStrategy
-{
-    
-    //TODO: faire un slider, mais si tu donnes une liste d'element (genre une liste non ordonné), au click sur l'un, tu affiches tel ou tel menu.
 }
 
 // --- Stratégie par défaut (autres éléments) ---
