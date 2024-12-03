@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pollo Dorado - Paiement</title>
+    <link rel="stylesheet" href="/assets/css/payment.css">
+</head>
+
+<body>
+    <div>
+        <ul class="div-links">
+            <li><a href="/index.html">Accueil</a></li>
+            <li><a href="/assets/html/panier.html">Panier</a></li>
+            <li><a href="#">À propos</a></li>
+        </ul>
+    </div>
+
+    <section class="payment">
+        <h2>Formulaire de Paiement</h2>
+        <form>
+            <input type="text" placeholder="Nom" required>
+            <input type="text" placeholder="Adresse" required>
+            <input type="tel" placeholder="Téléphone" required>
+            <input type="email" placeholder="Email" required>
+            <select required>
+                <option>Livraison</option>
+                <option>Retrait</option>
+            </select>
+            <input type="text" placeholder="Informations de Paiement" required>
+            <button type="submit" onclick="location.href='confirmation.html'">Payer</button>
+        </form>
+    </section>
+</body>
+<script>
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('nav-active');
+    }
+</script>
+
+</html>
