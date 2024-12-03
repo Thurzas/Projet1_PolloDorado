@@ -96,6 +96,10 @@ body
     animation : unlockBody 3s ease-in-out 3s forwards;
 }
 @keyframes unlockBody {
+    0%
+    {
+        overflow: scroll;
+    }
     100%
     {
         overflow-wrap:scroll;
