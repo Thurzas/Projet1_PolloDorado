@@ -161,6 +161,7 @@ class SketchyTitle extends SketchyStrategy
         const width = this.element.offsetWidth;
         const height = this.element.offsetHeight;
         
+        console.log(width, this.element.clientWidth);
         // Définir les dimensions et le style du SVG
         svg.setAttribute('width', width);
         svg.setAttribute('height', height);
