@@ -14,8 +14,13 @@
     <title>Document</title>
 </head>
 <body>
-    <section class="intro">
+    <section class="sound UI">
         <audio id="audio" src="assets/sounds/trumpetWars.mp3"></audio>
+        <button id="abort">X</button>
+        <button id="mute"></button>
+    </section>
+    
+    <section id="intro">
         <h2>Dans une galaxie lointaine, très lointaine...</h2>
     </section>
     <section id="title">
@@ -36,7 +41,7 @@
             </p>
         </div>
     </section>
-    <section id="outro">
+    <section id="outro" class="pop-in">
             <h1 class="SketchyTitle cyan">Pollo dorado</h1>   
             <h2 class="SketchyTitle">notre mission : conquérir la galaxie (du goût) !</h2>
             <section id="history">
@@ -54,23 +59,78 @@
                         volutpat nibh ac dignissim. Donec facilisis commodo ligula vitae vehicula. Aliquam cursus condimentum ornare. 
                     </p>
                 </article>
-                <article>
+                <article >
                     <img src="./assets/img/censored.png" alt="photo compromettante d'abdou et d'un poussin">
                 </article>
                 </section>
         </section>    
-        <section class="slider">
-            <ul>
-                <li>
-                    <img src="./assets/img/censored.png" alt="le dossier sur flo et abdou">
+        <section class="SketchySlider slider pop-in">
+            <ul class="content">
+                <li class="item">
+                    <img src="./assets/img/brg1.jpeg" alt="le dossier sur flo et abdou">
                 </li>
-                <li>
-                    <img src="./assets/img/censored.png" alt="le dossier sur flo et abdou">
+                <li class="item">
+                    <img src="./assets/img/brg2.jpeg" alt="le dossier sur flo et abdou">
                 </li>
-                <li>
+                <li class="item">
+                    <img src="./assets/img/brg3.jpeg" alt="le dossier sur flo et abdou">
+                </li>
+                <li class="item">
+                    <img src="./assets/img/brg4.jpeg" alt="le dossier sur flo et abdou">
+                </li>
+                <li class="item">
+                    <img src="./assets/img/brg5.jpeg" alt="le dossier sur flo et abdou">
+                </li>
+                <li class="item">
+                    <img src="./assets/img/brg6.jpeg" alt="le dossier sur flo et abdou">
+                </li>
+                <li class="item">
                     <img src="./assets/img/censored.png" alt="le dossier sur flo et abdou">
                 </li>
             </ul>
+        </section>
+        <section id="team" class="pop-in">
+            <h2>l'équipe :</h2>
+            <div class="team-content">
+                <article id="rebels">
+                    <h2 class="SketchyTitle cyan" >les rebels:</h2>
+                    <article>
+                        <h3>Abdou</h3>
+                        <img class="pop-in" src="./assets/img/img1.png" alt="darth vader">
+                    </article>
+                    <article>
+                        <h3>Florian</h3>
+                        <img class="pop-in" src="./assets/img/censored.png" alt="darth vader">
+                    </article> 
+                </article>        
+                <article class="VS">
+                    <h2 class="SketchyTitle orange"> VS </h2>
+                </article>
+                <article id="siths">
+                    <h2 class="SketchyTitle cyan">les étudiants siths:</h2>       
+                    <article>
+                        <h3>Darth max</h3>
+                        <img class="pop-in" src="./assets/img/censored.png" alt="darth vader">
+                    </article>   
+                    <article>
+                        <h3>Darth momo</h3>
+                        <img class="pop-in" src="./assets/img/censored.png" alt="darth vader">
+                    </article>   
+                    <article>
+                        <h3>Darth rom</h3>
+                        <img class="pop-in" src="./assets/img/censored.png" alt="darth vader">
+                    </article>   
+                    <article>
+                        <h3>Darth art</h3>
+                        <img class="pop-in" src="./assets/img/censored.png" alt="darth vader">
+                    </article>   
+                    <article>
+                        <h3>Darth matt</h3>
+                        <img class="pop-in" src="./assets/img/censored.png" alt="darth vader">
+                    </article>   
+                      
+                </article>
+            </div>
         </section>
     </section>
 </body>

@@ -8,7 +8,11 @@ window.addEventListener('load', () => {
             manager.addElement(title);
         }
     });
-
+    document.querySelectorAll('.SketchySlider').forEach(slider => {
+        if(slider!== null || slider !== undefined) {
+            manager.addElement(slider);
+        }
+    });
     window.addEventListener('resize', () => manager.redrawAll());
 });
 
@@ -43,7 +47,7 @@ class SketchyStrategy {
 // --- Factory pour déterminer la stratégie ---
 class SketchyStrategyFactory {
     static createStrategy(element) {
-        console.log(element);
+
         if(element.classList.contains('SketchyTitle'))
         {
             if(element.classList.contains('cyan'))
@@ -58,6 +62,10 @@ class SketchyStrategyFactory {
             {
                 return new SketchyTitle(element, './assets/fonts/Orbitron-VariableFont_wght.ttf', 'black', 'white');
             }            
+        }
+        if(element.classList.contains('SketchySlider'))
+        {
+            return new SketchySlider(element,true);
         }
 
         if(element.classList.contains('SketchyLabel'))
@@ -219,6 +227,68 @@ class SketchyTitle extends SketchyStrategy
             console.error('Erreur lors du chargement de la police :', err);
         });
     }
+}
+
+//Slider strategy
+class SketchySlider extends SketchyStrategy
+{
+    constructor(element, autoSlide) {
+        super(element);
+        this.autoSlide = autoSlide;
+    }
+    draw()
+    {                
+        const left = this.element.querySelector('.left');
+        const right = this.element.querySelector('.right');
+
+        if(left !== null && right !== null)
+        {
+            left.addEventListener('click',(element) =>
+            {
+                this.left();  
+                if(this.interval !== undefined) {
+                    clearInterval(this.interval);
+                }
+            });
+            right.addEventListener('click',(element) =>
+            {
+                this.right();
+                if(this.interval !== undefined) {
+                    clearInterval(this.interval);
+                }
+            });
+        }
+
+        if(this.autoSlide===true)
+        {
+            if(this.interval === undefined)
+            {
+               this.interval = setInterval(this.left.bind(this),3000);
+            }   
+        }
+    }
+
+    left()
+    {
+        const items = this.element.querySelectorAll('li');
+        const content = this.element.querySelector('.content');
+        if(items !== undefined && items.length > 0)
+        content.append(items[0]);        
+    }
+
+    right()
+    {
+        const items = this.element.querySelectorAll('li');
+        const content = this.element.querySelector('.content');
+        if(items !== undefined && items.length > 0)
+            content.prepend(items[items.length-1])
+    }
+}
+
+class menuSlider extends SketchyStrategy
+{
+    
+    //TODO: faire un slider, mais si tu donnes une liste d'element (genre une liste non ordonné), au click sur l'un, tu affiches tel ou tel menu.
 }
 
 // --- Stratégie par défaut (autres éléments) ---
