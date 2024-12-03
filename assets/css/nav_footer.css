@@ -11,11 +11,13 @@ p {
 
 header{
     nav {
+
+        margin-bottom: 2rem;
         display: flex;
         justify-content: space-between;
         padding: 0 2rem 2rem 2rem;
-        margin-bottom: 320px;
         @media (width > 980px){
+            margin-bottom: 6rem;
             align-items: flex-start;
         }
         figure {
@@ -37,16 +39,19 @@ header{
             border-radius: 0.2rem;
         }
         #logo {
+            left: 40vw;
+            position: absolute;
             width: 100px;
             @media (width > 980px){
                 width: 150px;
                 margin-top: 0;
+                left: 45vw;
             }
         }
         ul {
-            position: absolute;
-            /* opacity: 0; */
-            margin-top: 8rem;
+            margin-top: 2rem;
+            /* visibility: hidden; 
+            position: absolute;  */
             li {
                 color: var(--blue);
                 list-style-type: none;
@@ -63,13 +68,23 @@ header{
     }
 }
 
+.hide
+{
+    visibility: hidden; 
+    position: absolute; 
+}
+
+.show
+{
+    visibility: show; 
+    position: relative; 
+}
 footer {
     padding: 1rem; 
     #laser {
         width: 30%;
         display: block;
         margin: 0 auto;
-        
     }
     #icon {
         display: flex;
@@ -77,7 +92,11 @@ footer {
         justify-content: center;
         margin: 3rem;
         img {
+            width: 35px;
             transition: box-shadow 0.3s ease, transform 0.3s ease;
+            @media (width > 980px) {
+                width: 50px;
+            }
         }
         img:hover {
             box-shadow: 0 0 10px #26bbe2, 0 0 20px #26bbe2; /* Effet néon */
@@ -86,15 +105,18 @@ footer {
         }
     }
     ul {
-        display: flex; 
+        
+        display: flex;
         justify-content: center;
         gap: 3rem;
         li {
             color: white;
             list-style: none;
-            font-size: 1.5em;
+            font-size: 0.7rem;
             border-bottom: 1.5px solid var(--blue);
-            
+            @media (width > 980px) {
+                font-size: 1.5rem;
+            }
         }
         li:hover {
             box-shadow: 0 2px 0 #26bbe2, 0 2px 0 #26bbe2; /* Effet néon */

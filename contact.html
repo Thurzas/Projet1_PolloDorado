@@ -11,21 +11,21 @@
     <header>
         <nav>
             <figure>
-                <img class="hover_nav" src="assets/img/burger-menu.png" alt="menu">
-                <figcaption>Menu</figcaption>
+                <img id="targetMenu" class="hover_nav" src="assets/img/burger-menu.png" alt="menu">
+                <figcaption >Menu</figcaption>
+                <ul class="hide" id="navbar">
+                    <li>Accueil</li>
+                    <li>Menu</li>   
+                    <li>A propos</li>
+                    <li>Commander</li>
+                    <li>Contact</li>
+                </ul>
             </figure>
             <img id="logo" src="assets/img/logoPouletSansBackground.svg" alt="logo">
             <figure>
                 <img class="hover_nav" src="assets/img/panier.png" alt="panier">
                 <figcaption>Panier</figcaption>
             </figure>
-            <ul>
-                <li>Accueil</li>
-                <li>Menu</li>   
-                <li>A propos</li>
-                <li>Commander</li>
-                <li>Contact</li>
-            </ul>
         </nav>
     </header>
     <main>
@@ -74,5 +74,6 @@
         </ul>
         <p>© Pollo Dorado</p>
     </footer>
+    <script src="assets/js/nav.js"></script>
 </body>
 </html>
