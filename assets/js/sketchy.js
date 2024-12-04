@@ -195,7 +195,7 @@ class SketchyTitle extends SketchyStrategy
                     //const scaleFactor = (fontSize/font.unitsPerEm);
                     let offsetX = fontSize*scaleFactor*0.5; // Décalage en X pour la glyphe intérieure
                     let offsetY = fontSize*scaleFactor*0.5; // Décalage en Y pour la glyphe intérieure
-                    //fontSize = scaleFactor * font.unitsPerEm;
+                    fontSize = scaleFactor * font.unitsPerEm;
                     console.log("original fs : " +  parseInt(window.getComputedStyle( this.element, null ).getPropertyValue('font-size')) +"   fs: " +fontSize);
                     const lineHeight = (font.ascender - font.descender) * fontSize / font.unitsPerEm;
                     console.log(width);

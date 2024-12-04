@@ -142,6 +142,7 @@ body
     width:clamp(80%,600px,85%);
     margin:0 auto;
     top:10rem;
+    padding:2rem;
     background-color: rgba(255,255,255,0.1);
     article
     {
@@ -165,7 +166,6 @@ body
     width:90%;
     display: flex;
     flex-direction: row;
-    background-color: rgba(255,255,255,0.1);
     color:white;
     margin:0 auto;
     article
@@ -176,6 +176,8 @@ body
 
 #team
 {
+    background-color: rgba(255,255,255,0.1);
+    padding:2rem;
     width:90%;
     gap:1rem;
     margin:6rem auto;
@@ -377,6 +379,10 @@ body
     #content
     {
         animation: doNothing 1s ;
+    }
+    header
+    {
+        animation : pop-in 3s ease-in-out 3s forwards;
     }
     body
     {
