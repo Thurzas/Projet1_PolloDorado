@@ -63,6 +63,8 @@ body
             opacity: 1;
         }
         img{
+            align-items: center;
+            max-height:512px; 
             opacity: inherit;
             aspect-ratio: 1;
             max-width: 30vw;  
@@ -144,6 +146,9 @@ body
     top:10rem;
     padding:2rem;
     background-color: rgba(255,255,255,0.1);
+    p{
+        font-size: medium;
+    }
     article
     {
         flex-direction: column;
@@ -325,6 +330,10 @@ body
     top: 0;
   }
   
+  .restaurant
+  {
+    width:clamp(650px,20%,30%);
+  }
   /* Set the scrolling animation and position it */
   #content {
     animation: scroll 180s linear 16s;
