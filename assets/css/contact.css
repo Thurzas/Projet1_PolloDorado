@@ -24,15 +24,21 @@ main {
     align-items: center;
     justify-content: space-between;
     gap: 3rem;
+    @media (width > 980px) {
+        flex-direction: row;
+        justify-content: space-around;
+        height: 60vh;
+    }
         h1, h2 {
             color: var(--jaune);
             font-size: xx-large;
         }
         .map {
             padding: 2rem;
-            max-height: 1500px;
-            max-width: 1500px;
             width: 100%;
+            @media (width > 1200px) {
+                width: 130%;
+            }
         }
         form {
             width: 22rem;
