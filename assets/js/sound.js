@@ -40,5 +40,6 @@ window.addEventListener('load', () => {
         content.style.animation = "none";
         audio.muted = !audio.muted;
         abort.style.opacity = 0;
-    });
+    });    
+
 });

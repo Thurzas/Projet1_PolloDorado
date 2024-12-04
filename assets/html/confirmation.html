@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pollo Dorado - Confirmation</title>
+    <link rel="stylesheet" href="/assets/css/confirmation.css">
+</head>
+
+<body>
+    <div>
+        <ul class="div-links">
+            <li><a href="/index.html">Accueil</a></li>
+            <li><a href="/assets/html/commande.html">Commander</a></li>
+            <li><a href="/assets/html/panier.html">Panier</a></li>
+            <li><a href="/menus.html">Menu</a></li>
+            <li><a href="/About.html">À propos</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <section class="confirmation">
+        <h2>Merci pour votre commande !</h2>
+        <p>Total : 41.97 €</p>
+        <p>Livraison prévue à 18h30</p>
+        <button onclick="location.href='index.html'">Retour à l'Accueil</button>
+    </section>
+</body>
+<script>
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('nav-active');
+    }
+</script>
+
+</html>

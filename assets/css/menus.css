@@ -3,7 +3,7 @@
 }
 
 body {
-    background-image: url(../img/fond-ecran.png);
+    background-image: url('../img/background.png');
     margin: 0;
     font-family: Orbitron;
 }
@@ -22,10 +22,53 @@ main {
     align-items: center;
 
     h2 {
-        margin-top: 50px;
-        margin-bottom: 50px;
-        color: var(--primary-color);
+        color: #ffbf01ff;
     }
+}
+
+.textContent {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+    z-index:2;
+    color: yellow;
+    font-weight: 600;
+    max-width: 200px;
+    text-wrap: wrap;
+}
+
+.imgHover {
+    transition: 0.5s;
+}
+
+.articles:hover .imgHover {
+    opacity: 0;
+}
+
+.articles:hover .textContent {
+    opacity: 1;
+}
+
+.button-starwars {
+    margin: 10px 0px;
+    background-image: url(../img/background.png); /* Fond noir */
+    color: #fff; /* Texte blanc */
+    font-family: var(--main-typo); /* Police inspirée de Star Wars */
+    font-size: 12px;
+    border: 2px solid #26bbe2; /* Bordure */
+    padding: 10px 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Espacement des lettres pour un effet futuriste */
+    cursor: pointer;
+    position: relative;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.button-starwars:hover {
+    box-shadow: 0 0 10px #26bbe2, 0 0 20px #26bbe2; /* Effet néon */
+    transform: scale(1.05); /* Léger zoom au survol */
 }
 
 .navMenus {
@@ -89,42 +132,108 @@ main {
     }
 }
 
+.menuOffresDuMoment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 .bandeauMenus {
     display: flex;
     justify-content: center;
-    background-image: url('../img/stars.jpg');
+    background-image: url('../img/background.jpg');
     box-shadow: 10px 10px 100px var(--primary-color);
     border: 3px solid var(--primary-color);
     border-radius: 50px;
     width: 80%;
+    max-height: 400px;
     margin-bottom: 50px;
+    color: white;
 
     h2 {
         color: white;
     }
+}
 
-    div {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        width: 100%;
+.firstDivBandeau {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+
+}
+
+.secondDivBandeau {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.thirdDivBandeau {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleMain {
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 80%;
+    gap: 50px;
+    flex-wrap: wrap;
+
+    h3 {
         color: white;
-        text-align: center;
-        line-height: 1px;
-        font-size: 100%;
-
-        img {
-            width: 70%;
-        }
     }
 }
 
-.nouveautes {
-    display: grid;
+.articles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../img/background.png');
+    box-shadow: 10px 10px 100px var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 50px;
+    text-align: center;
+    max-width: 337px;
+    min-width: 337px;
+    max-height: 500px;
+
+    img {
+        width: 100%;
+    }
+
+    p {
+        font-size: 0.8rem;
+        padding-top: 10px;
+    }
+
+    h3 {
+        font-size: auto;
+    }
+}
+
+.menuMenus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.menuMenusBurgers {
+    display: flex;
     align-items: center;
     justify-items: center;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
     width: 80%;
     gap: 50px;
 
@@ -133,54 +242,69 @@ main {
     }
 }
 
-.nouv1 {
-    grid-column: 1;
-    background-image: url('../img/stars.jpg');
-    box-shadow: 10px 10px 100px var(--primary-color);
-    border: 3px solid var(--primary-color);
-    border-radius: 50px;
-    text-align: center;
+.menuMenusBucket {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 80%;
+    gap: 50px;
 
-    img {
-        width: 100%;
+    h3 {
+        color: white;
     }
 }
 
-.nouv2 {
-    grid-column: 2 / 3;
-    background-image: url('../img/stars.jpg');
-    box-shadow: 10px 10px 100px var(--primary-color);
-    border: 3px solid var(--primary-color);
-    border-radius: 50px;
-    text-align: center;
+.menuMenusVegetarien {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 80%;
+    gap: 50px;
 
-    img {
-        width: 100%;
+    h3 {
+        color: white;
     }
 }
 
-.nouv3 {
-    grid-column: 3 / 4;
-    background-image: url('../img/stars.jpg');
-    box-shadow: 10px 10px 100px var(--primary-color);
-    border: 3px solid var(--primary-color);
-    border-radius: 50px;
-    text-align: center;
+.menuMenusPadawans {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 80%;
+    gap: 50px;
 
-    img {
-        width: 100%;
+    h3 {
+        color: white;
     }
 }
 
-.nouv4 {
-    grid-column: 4 / 5;
-    background-image: url('../img/stars.jpg');
-    box-shadow: 10px 10px 100px var(--primary-color);
-    border: 3px solid var(--primary-color);
-    border-radius: 50px;
-    text-align: center;
+.menuBurgers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
 
-    img {
-        width: 100%;
+.burgersPoulet {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 80%;
+    gap: 50px;
+
+    h3 {
+        color: white;
+    }
+}
+
+.burgersVegetariens {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 80%;
+    gap: 50px;
+
+    h3 {
+        color: white;
     }
 }

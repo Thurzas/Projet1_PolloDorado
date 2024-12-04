@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pollo Dorado - Panier</title>
+    <link rel="stylesheet" href="/assets/css/panier.css">
+</head>
+
+<body>
+    <div>
+        <ul class="div-links">
+            <li><a href="/index.html">Accueil</a></li>
+            <li><a href="/assets/html/commande.html">Commander</a></li>
+            <li><a href="/assets/html/panier.html">Panier</a></li>
+            <li><a href="/menus.html">Menu</a></li>
+            <li><a href="/About.html">À propos</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+
+    <section class="cart">
+        <h2>Votre Panier</h2>
+        <p>Poulet Galaxie : 12.99 € (x2)</p>
+        <p>Ailes Cosmiques : 15.99 € (x1)</p>
+        <p><strong>Total :</strong> 41.97 €</p>
+        <button onclick="location.href='payment.html'">Passer à la Caisse</button>
+    </section>
+</body>
+<script>
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('nav-active');
+    }
+</script>
+
+</html>
