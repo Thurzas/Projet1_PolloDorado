@@ -10,7 +10,6 @@ body
     font-weight: 7;
     font-style: normal;      
     background-image: url("../img/stars-964022_1920.png");
-    background-position: fixed;
     overflow: hidden;
     animation : unlockBody 3s ease-in-out 123s forwards;
 }
@@ -88,7 +87,7 @@ body
         margin:1rem auto;
         font-size: 3em;
     } 
-    ;
+    
 }
 
 .unlockBody
@@ -143,6 +142,7 @@ body
     width:clamp(80%,600px,85%);
     margin:0 auto;
     top:10rem;
+    padding:2rem;
     background-color: rgba(255,255,255,0.1);
     article
     {
@@ -166,7 +166,6 @@ body
     width:90%;
     display: flex;
     flex-direction: row;
-    background-color: rgba(255,255,255,0.1);
     color:white;
     margin:0 auto;
     article
@@ -177,6 +176,8 @@ body
 
 #team
 {
+    background-color: rgba(255,255,255,0.1);
+    padding:2rem;
     width:90%;
     gap:1rem;
     margin:6rem auto;
@@ -250,19 +251,27 @@ body
     }
 }
 
+@font-face {
+    font-family: "Star Jedi Hollow";
+    src:url("../fonts/starjhol.ttf");
+  }
+  
 #title
 {
     color:#ffbf01ff;
     position: absolute;
-    top: 15%;
+    top: 25%;
     left: 45%;
     z-index: 1;
     animation: title 9s ease-out 9s;
     opacity: 0;
     h2
     {
+        font-size: 64px;
+        font-family: "Star Jedi Hollow";
         color:#ffbf01ff;
-        margin: 2rem auto;
+        margin: 0 auto;
+        text-align: center;
     }
 }
 
@@ -339,3 +348,81 @@ body
           top: -370%;
       }
   }
+
+
+@keyframes doNothing{
+    0%
+    {
+        position:absolute;
+        visibility: hidden;
+    }    
+    100%
+    {
+        position:absolute;
+        visibility: hidden;
+    }    
+}
+@media (max-width: 990px) {
+
+    #title
+    {
+        animation: doNothing 1s ;
+    }
+    #intro
+    {
+        animation: doNothing 1s ;
+    }
+    #board
+    {
+        animation: doNothing 1s ;
+    }
+    #content
+    {
+        animation: doNothing 1s ;
+    }
+    header
+    {
+        animation : pop-in 3s ease-in-out 3s forwards;
+    }
+    body
+    {
+        overflow-X: hidden;
+        overflow-y: scroll;
+    }
+    
+    #outro
+    {
+        animation : pop-in 3s ease-in-out 3s forwards;
+        h1
+        {
+            font-size: 42px;
+        }
+        h2{
+            font-size: 36px;
+        }
+    }
+    #history
+    {
+        display: flex;
+        flex-direction: column;
+        article
+        {
+            width:100%;
+        }    
+        img
+        {
+            width:250px;
+        }
+    }
+    #siths
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .team-content
+    {
+        flex-direction: column;
+    }
+
+}
