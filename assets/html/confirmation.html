@@ -5,19 +5,31 @@
     <meta charset="UTF-8">
     <title>Pollo Dorado - Confirmation</title>
     <link rel="stylesheet" href="/assets/css/confirmation.css">
+    <link href="/assets/css/nav_footer.css" rel="stylesheet" />
 </head>
 
 <body>
-    <div>
-        <ul class="div-links">
-            <li><a href="/index.html">Accueil</a></li>
-            <li><a href="/assets/html/commande.html">Commander</a></li>
-            <li><a href="/assets/html/panier.html">Panier</a></li>
-            <li><a href="/menus.html">Menu</a></li>
-            <li><a href="/About.html">À propos</a></li>
-            <li><a href="/contact.html">Contact</a></li>
-        </ul>
-    </div>
+    <header>
+        <nav>
+            <figure>
+                <img id="targetMenu" class="hover_nav" src="/assets/img/burger-menu.png" alt="menu">
+                <figcaption>Menu</figcaption>
+                <ul class="hide" id="navbar">
+                    <li><a href="/index.html">Accueil</a></li>
+                    <li><a href="/assets/html/commande.html">Commander</a></li>
+                    <li><a href="/assets/html/panier.html">Panier</a></li>
+                    <li><a href="/menus.html">Menu</a></li>
+                    <li><a href="/About.html">À propos</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </figure>
+            <img id="logo" src="/assets/img/logoPouletSansBackground.svg" alt="logo">
+            <figure>
+                <img class="hover_nav" src="/assets/img/panier.png" alt="panier">
+                <figcaption>Panier</figcaption>
+            </figure>
+        </nav>
+    </header>
 
     <section class="confirmation">
         <h2>Merci pour votre commande !</h2>
@@ -25,12 +37,25 @@
         <p>Livraison prévue à 18h30</p>
         <button onclick="location.href='index.html'">Retour à l'Accueil</button>
     </section>
+
+    <footer>
+        <img id="laser" src="/assets/img/sabre_laser.png" alt="laser">
+        <div id="icon">
+            <img src="/assets/img/facebook_icon.svg" alt="fb">
+            <img src="/assets/img/twitter_icon.svg" alt="twitter">
+            <img src="/assets/img/insta_icon.svg" alt="insta">
+        </div>
+        <ul>
+            <li><a href="/index.html">Accueil</a></li>
+            <li><a href="/menus.html">Menu</a></li>
+            <li><a href="/About.html">À propos</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li>CGU</li>
+        </ul>
+        <p>© Pollo Dorado</p>
+    </footer>
+    <script src="/assets/js/nav.js"></script>
 </body>
-<script>
-    function toggleMenu() {
-        const navLinks = document.querySelector('.nav-links');
-        navLinks.classList.toggle('nav-active');
-    }
-</script>
+
 
 </html>
