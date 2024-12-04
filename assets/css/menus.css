@@ -130,6 +130,7 @@ main > section {
         gap: 5px;
         font-size: 80%;
         margin-bottom: 50px;
+        padding: 0;
     }
 
     li:not(:last-child)::after {
