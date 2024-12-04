@@ -5,14 +5,21 @@ window.addEventListener('load', function() {
     const ongletItems = document.querySelector(".navMenus").children[0].children;
     const onglet = document.querySelector(".navMenus").children[0];
     const main = document.querySelector("main");
+    let items = [];
+    for(let i =0;i<ongletItems.length;i++) 
+    {
+        let item ={
+            onglet:ongletItems[i],
+            menu:menus[i]
+        }
+        items.push(item);
+    }
 
-    for(let i=0;i<ongletItems.length;i++) {
-        ongletItems[i].addEventListener('click', function() {
-            if(i<menus.length)
-            {
-                onglet.insertBefore(ongletItems[i],ongletItems[0]);
-                main.insertBefore(menus[i],main.children[0]);
-            }
+    // Ajouter les événements click pour chaque onglet
+    for (let i = 0; i < items.length; i++) {
+        items[i].onglet.addEventListener("click", () => {
+        // Déplacer le menu correspondant en haut de la liste dans <main>
+        main.insertBefore(items[i].menu, main.firstChild);
         });
     }
 });
