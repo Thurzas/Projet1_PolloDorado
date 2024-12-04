@@ -1,29 +1,41 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/nav.css">
     <link rel="stylesheet" href="./assets/css/index.css">
+    <link href="assets/css/nav_footer.css" rel="stylesheet" />
     <title>Pollo'Dorado</title>
 </head>
 <body>
-
     <header>
         <nav>
-            <img class="panier-burger" src="./assets/img/burger-menu.png" alt="menuBurger">
-            <img id="logo" class='logo' src="./assets/img/logo.png" alt="Logo">
-            <img class="panier-burger" src="./assets/img/panier.png" alt="Panier">
+            <figure>
+                <img id="targetMenu" class="hover_nav" src="assets/img/burger-menu.png" alt="menu">
+                <figcaption >Menu</figcaption>
+                <ul class="hide" id="navbar">
+                    <li><a href="./index.html">Accueil</a></li>
+                    <li><a href="./menus.html">Menu</a></li>   
+                    <li><a href="./About.html">A propos</a></li>
+                    <li><a href="./commande.html">Commander</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </figure>
+            <img id="logo" src="assets/img/logoPouletSansBackground.svg" alt="logo">
+            <figure>
+                <img class="hover_nav" src="assets/img/panier.png" alt="panier">
+                <figcaption>Panier</figcaption>
+            </figure>
         </nav>
     </header>
     <main>
         <section>
-            <h1>Bienvenue dans la Galaxie</h1>
+            <h1>Bienvenue dans la Galaxie de Pollo'Dorado</h1>
             <p>Découvrez un univers infini où chaque étoile cache une histoire et chaque aventure vous rapproche un peu plus de l'infini. Préparez-vous à explorer, apprendre et conquérir de nouveaux horizons.</p>
             <p>Dans cette galaxie, même le poulet rêve de voler plus haut.</p>
             <div>
-                <button class="button-starwars">menu</button>
-                <button class="button-starwars">commande</button>
+                <button class="button-starwars"><a href="./menus.html">menu</a></button>
+                <button class="button-starwars"><a href="./commande.html">commande</a></button>
             </div>
         </section>
         <div id="promo-photo">
@@ -32,15 +44,40 @@
             </article>
         </div>
         <section>
+            <h2>Promotion a venir !</h2>
+            <p>Prochainement à la carte <br> Le Jedi Supreme <br>Le Sith Destroyer <br>Le Millennium Bacon</p>
             <div class="burger-Top3Global">
-                
-                <img class="burger-Top3" src="./assets/img/burger_banniere.jpg" alt="miam"/>
-                <img class="burger-Top3" src="./assets/img/burger_banniere.jpg" alt="miam"/>
-                <img class="burger-Top3" src="./assets/img/burger_banniere.jpg" alt="miam"/>
+                <img class="burger-Top3" src="./assets/img/brg1.jpeg" alt="miam"/>
+                <img class="burger-Top3" src="./assets/img/brg2.jpeg" alt="miam"/>
+                <img class="burger-Top3" src="./assets/img/brg6.jpeg" alt="miam"/>
             </div>
         </section>
-
-
+        <section>
+            <div id="Presentation">
+            <h1>Découvrer notre histoire</h1>
+            <p>Plongez dans une galaxie pas si lointaine, où le Seigneur Abdou et son fidèle acolyte, le Seigneur Florian, ont décidé de passer du côté obscur... de la cuisine ! Aux côtés de leur équipe de collaborateurs Sith, ils ont lancé un projet audacieux : un restaurant qui saura éveiller la Force de votre appétit.
+            Rejoignez cette épopée culinaire où chaque plat est un duel épique entre saveurs et créativité. Que la sauce soit avec vous !
+            </p>
+                <button class="button-starwars"><a href="./About.html">A propos</a></button>
+            </div>
+        </section>
     </main>
+    <footer>
+        <img id="laser" src="assets/img/sabre_laser.png" alt="laser">
+        <div id="icon">    
+            <img src="assets/img/facebook_icon.svg" alt="fb">
+            <img src="assets/img/twitter_icon.svg" alt="twitter">
+            <img src="assets/img/insta_icon.svg" alt="insta">
+        </div>
+        <ul>
+            <li><a href="./index.html">Accueil</a></li>
+            <li><a href="./menus.html">Menu</a></li>
+            <li><a href="./About.html">A propos</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="">CGU</a></li>
+        </ul>
+        <p>© Pollo Dorado</p>
+    </footer>
+    <script src="assets/js/nav.js"></script>
 </body>
 </html>

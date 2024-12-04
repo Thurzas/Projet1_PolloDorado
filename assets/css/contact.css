@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+:root {
+    --jaune: #ffbf01ff;
+    --blue: #26BBE2;
+}
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Orbitron", sans-serif;
+}
+
+body {
+    background-image: url("../img/fond.png");
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    @media (width > 980px) {
+        flex-direction: row;
+        justify-content: space-around;
+        height: 60vh;
+    }
+        h1, h2 {
+            color: var(--jaune);
+            font-size: xx-large;
+        }
+        .map {
+            padding: 2rem;
+            width: 100%;
+            @media (width > 1200px) {
+                width: 130%;
+            }
+        }
+        form {
+            width: 22rem;
+            padding: 1rem;
+            border-radius: 1rem;
+            border: 5px solid var(--jaune);
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    width: 100%;
+                    gap: 1rem;
+                    button {
+                        margin: 0 auto;
+                        background: none;
+                        color: var(--jaune);
+                        border: 2px solid var(--jaune);
+                        border-radius: 1rem;
+                        padding: 0.3rem;
+                        text-transform: uppercase;
+                        transition: background-color 300ms, color 300ms;
+                    }
+                    button:hover {
+                        color: black;
+                        background-color: var(--jaune);
+                    }
+                }
+                label {
+                    color: var(--jaune);
+                    text-decoration: none;
+                }
+                input, textarea {
+                    font: 1rem sans-serif;
+                    width: 300px;
+                    border: 1px solid black;
+                }
+                textarea {
+                    height: 10rem;
+                    resize: none;
+                }
+        }
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+

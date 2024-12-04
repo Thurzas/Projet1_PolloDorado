@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('/assets/img/background.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffbf01ff;
+}
+
+
+div {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.div-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.div-links li {
+    display: inline;
+}
+
+.div-links a {
+    text-decoration: none;
+    color: #ffbf01ff;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.div-links a:hover {
+    color: #2688E2;
+}
+
+
+.confirmation {
+    text-align: center;
+    padding: 200px 20px;
+    background: url(/assets/img/background.png);
+    color: #ffbf01ff;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.confirmation h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2688E2;
+}
+
+.confirmation p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+button,
+.confirmation-button {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #fff;
+    background: black;
+    border: 2px solid #00f0ff;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+    box-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff, 0 0 30px #00f0ff;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+button:hover,
+.confirmation-button:hover {
+    text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff, 0 0 30px #00f0ff;
+    box-shadow: 0 0 20px #00f0ff, 0 0 40px #00f0ff, 0 0 60px #00f0ff;
+    transform: scale(1.1);
+}
+
+
+@media (max-width: 480px) {
+    div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .div-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .confirmation h2 {
+        font-size: 2rem;
+    }
+
+    .confirmation {
+        padding: 30px 15px;
+    }
+    .confirmation h2 {
+        font-size: 1.8rem;
+    }
+
+    .confirmation p {
+        font-size: 1rem;
+    }
+
+    .confirmation button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}

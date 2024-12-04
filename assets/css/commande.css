@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+:root {
+    --jaune: #ffbf01ff;
+    --blue: #26BBE2;
+    --noir-transparent: rgba(0, 0, 0, 0.7);
+    --bleu-neon: #00f0ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: url('/assets/img/background.png') no-repeat center center fixed;
+    background-size: cover;
+    color: var(--jaune);
+    line-height: 1.6;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+}
+
+header nav figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav figure figcaption {
+    color: aliceblue;
+    margin-top: 0.5rem;
+}
+
+header nav .hover_nav {
+    width: fit-content;
+    height: fit-content;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    border-radius: 0.2rem;
+}
+
+header nav .hover_nav:hover {
+    box-shadow: 0 0 10px var(--blue), 0 0 20px var(--blue);
+    transform: scale(1.05);
+}
+
+header nav #logo {
+    position: absolute;
+    left: 40vw;
+    width: 100px;
+}
+
+header nav ul.hide {
+    visibility: hidden;
+    position: absolute;
+}
+
+header nav ul.show {
+    visibility: visible;
+    position: relative;
+}
+
+header nav ul li {
+    color: var(--blue);
+    list-style-type: none;
+    font-size: 1.5em;
+    padding: 1rem;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+header nav ul li:hover {
+    box-shadow: 0 0 10px var(--blue), 0 0 20px var(--blue);
+    transform: scale(1.05);
+    border-radius: 0.2rem;
+}
+
+main {
+    min-height: calc(100vh - 300px);
+}
+
+.section {
+    margin: 20px;
+    padding: 20px;
+    background: var(--noir-transparent);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero {
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 40vh;
+    margin: 0 auto 40px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease;
+    z-index: 1;
+}
+
+.hero-image.active {
+    opacity: 1;
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+.hero-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px var(--bleu-neon), 0 0 40px var(--bleu-neon), 0 0 60px var(--bleu-neon);
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.product {
+    text-align: center;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.product img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px var(--bleu-neon), 0 0 20px var(--bleu-neon);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.product img:hover {
+    box-shadow: 0 0 20px var(--bleu-neon), 0 0 40px var(--bleu-neon), 0 0 60px var(--bleu-neon);
+}
+
+.product h3 {
+    font-size: 1.5rem;
+    color: var(--blue);
+    margin-bottom: 10px;
+    min-height: 40px;
+}
+
+.product p {
+    font-size: 1rem;
+    margin: 5px 0;
+    min-height: 30px;
+}
+
+.product .price {
+    font-weight: bold;
+    color: var(--blue);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    width: 100%;
+}
+
+.quantity-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.quantity-btn {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    color: #fff;
+    background: black;
+    border: 2px solid var(--bleu-neon);
+    padding: 5px 10px;
+    cursor: pointer;
+    text-shadow: 0 0 5px var(--bleu-neon);
+    box-shadow: 0 0 5px var(--bleu-neon);
+    transition: all 0.3s ease-in-out;
+}
+
+.quantity-btn:hover {
+    text-shadow: 0 0 10px var(--bleu-neon);
+    box-shadow: 0 0 10px var(--bleu-neon);
+}
+
+.quantity {
+    font-size: 1.2rem;
+    margin: 0 10px;
+    color: var(--bleu-neon);
+}
+
+.add-to-cart {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #fff;
+    background: black;
+    border: 2px solid var(--bleu-neon);
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    text-shadow: 0 0 5px var(--bleu-neon), 0 0 10px var(--bleu-neon), 0 0 20px var(--bleu-neon);
+    box-shadow: 0 0 10px var(--bleu-neon), 0 0 20px var(--bleu-neon), 0 0 30px var(--bleu-neon);
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.add-to-cart:hover {
+    text-shadow: 0 0 10px var(--bleu-neon), 0 0 20px var(--bleu-neon), 0 0 30px var(--bleu-neon);
+    box-shadow: 0 0 20px var(--bleu-neon), 0 0 40px var(--bleu-neon), 0 0 60px var(--bleu-neon);
+    transform: scale(1.1);
+}
+
+footer {
+    padding: 1rem;
+}
+
+footer #laser {
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+}
+
+footer #icon {
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    margin: 3rem;
+}
+
+footer #icon img {
+    width: 35px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+footer #icon img:hover {
+    box-shadow: 0 0 10px var(--blue), 0 0 20px var(--blue);
+    transform: scale(1.05);
+    border-radius: 0.2rem;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+footer ul li {
+    color: white;
+    list-style: none;
+    font-size: 0.7rem;
+    border-bottom: 1.5px solid var(--blue);
+}
+
+footer ul li:hover {
+    box-shadow: 0 2px 0 var(--blue), 0 2px 0 var(--blue);
+    transform: scale(1.05);
+    border-radius: 0.2rem;
+}
+
+footer p {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav #logo {
+        position: static;
+        margin-bottom: 1rem;
+    }
+
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .product img {
+        height: 250px;
+    }
+
+    .carousel {
+        max-width: 600px;
+        height: 35vh;
+    }
+
+    footer ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .product img {
+        height: 200px;
+    }
+
+    .product h3 {
+        font-size: 1.3rem;
+    }
+
+    .product p {
+        font-size: 0.9rem;
+    }
+
+    .add-to-cart {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .quantity-btn {
+        font-size: 1rem;
+        padding: 4px 8px;
+    }
+
+    .quantity {
+        font-size: 1rem;
+    }
+
+    .carousel {
+        max-width: 100%;
+        height: 30vh;
+    }
+
+    footer #icon {
+        gap: 2rem;
+    }
+}

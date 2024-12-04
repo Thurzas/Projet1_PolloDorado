@@ -1,16 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 :root {
-    --main-typo:"Orbitron", serif; 
+    --main-typo:"Orbitron", serif;
+    --main-color: #ffbf01ff;
 }
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-p,h1,h2{
+h1,h2 {
     font-family: var(--main-typo);
+    color: var(--main-color);
+    font-size: 2rem;
+}
+p {
+    
     color: white;
+    font-size: medium;
 }
 body {
     width: 100vw;
@@ -20,7 +27,7 @@ body {
 
 
 main {
-    height: 100vh;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,11 +39,6 @@ main {
         align-items: center ;
         margin-top: 50px;
         gap: 80px;
-
-
-        h1 {
-            
-        }
 
         p {
             display: flex;
@@ -87,30 +89,49 @@ main {
         linear-gradient(to bottom, rgba(0, 0, 0,1), rgba(0, 0, 0, 0) 90%),
         linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 10%),
         url(../img/burger_banniere.jpg);
-          background-position: center;
+        background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
+        @media (width < 960px){
+
+            margin-top: 0;
+        }
 
         p{
+            height:fit-content;
             background-image: url(../img/background.png);
             max-height: fit-content;
             color: rgb(255, 0, 0);
             margin-top: 10rem;
             font-family: var(--main-typo);
-            font-size: xx-large;
             border: 2px solid #ff0000;
             box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
             padding: 20px;
+            @media (width < 960px){
+
+                margin: 52px 40px 0px 40px;
+
+            }
         }
     }
 }
 .burger-Top3Global{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 130px 0 0 0 ;
-  gap: 30px;
-  .burger-Top3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0 0 0 ;
+    gap: 100px;
+    .burger-Top3{
     width: 400px;
-  }
+    
+    }
+}
+
+#Presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+    gap: 50px;
+    font-size: larger; 
 }

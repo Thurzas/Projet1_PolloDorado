@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/about.css">
+    <link rel="stylesheet" href="assets/css/nav_footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/roughjs/bundled/rough.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/opentype.js/1.3.4/opentype.min.js"></script>
+    <script src="assets/js/sketchy.js"></script>
+    <script src="assets/js/sound.js"></script>
+    <script src="assets/js/nav.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header class="pop-in">
+        <nav>
+            <figure>
+                <img id="targetMenu" class="hover_nav" src="assets/img/burger-menu.png" alt="menu">
+                <figcaption >Menu</figcaption>
+                <ul class="hide" id="navbar">
+                    <li><a href="./index.html">Accueil</a></li>
+                    <li><a href="./menus.html">Menu</a></li>   
+                    <li><a href="./About.html">A propos</a></li>
+                    <li><a href="./commande.html">Commander</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </figure>
+            <img id="logo" src="assets/img/logoPouletSansBackground.svg" alt="logo">
+            <figure>
+                <img class="hover_nav" src="assets/img/panier.png" alt="panier">
+                <figcaption>Panier</figcaption>
+            </figure>
+        </nav>
+    </header>
+    <main>
+        <section class="sound UI">
+            <audio id="audio" src="assets/sounds/trumpetWars.mp3"></audio>
+            <button id="abort">X</button>
+            <button id="mute"></button>
+        </section>
+        
+        <section id="intro">
+            <h2>Dans une galaxie lointaine, très lointaine...</h2>
+        </section>
+        <section id="title">
+            <h2>Chicken</h2>
+            <h2> Wars </h2>
+        </section>
+        <section id="board">
+            <div id="content">
+                <h2>Episode 1 :</h2>
+                <h3>Le Fritton ultime.</h3>
+                <p>
+                    C’est une époque de chaos… Le redoutable Abdou, Seigneur de l’Empire des Nuggets, et son bras droit, Florian, ont déclenché une guerre intergalactique contre les terrifiants étudiants Siths.
+                    Ces derniers – Darth Matt, Darth Max, Darth Art, Darth Momo et Darth Rom – contrôlent en secret un réseau illégal de sauce barbecue addictif à base de cristaux Kyber.
+                    Au cœur du conflit, une chaîne de fast-food légendaire: le Pollo Dorado. Ce restaurant à l’effigie d’un seigneur Sith à tête de coq doré est le théâtre de batailles sanglantes entre factions rivales. On murmure que le Fritton Ultime, une aile de poulet frite capable de détruire des planètes, y est cachée…
+                    Florian, ancien chef cuistot reconverti en sous-fifre maladroit, rêve en secret de trahir Abdou pour ouvrir sa propre franchise de tacos galactiques. Mais Abdou, obsédé par l’idée de transformer Pollo Dorado en la première chaîne de fast-food universelle, se méfie de tout, même de son ombre.
+                    Pendant ce temps, Darth Rom, connu pour ses monologues interminables, et Darth Momo, passionné par la cuisine moléculaire, élaborent un plan machiavélique : créer un super combo bucket capable de soumettre tout être vivant par pure addiction gustative.          
+                    Entre explosions de sauces piquantes, sabres lasers déguisés en brochettes et conspirations dignes d’un feuilleton de seconde zone, une question demeure : qui régnera sur l’Empire des Poulets ?
+                </p>
+            </div>
+        </section>
+        <section id="outro" class="pop-in">        
+            <h1 class="SketchyTitle cyan">Pollo dorado</h1>   
+            <h2 class="SketchyTitle">notre mission : conquérir la galaxie (du goût) !</h2>
+            <section id="history">
+                <article>
+                    <header>
+                        <h3>
+                        notre histoire:
+                        </h3>
+                    </header>
+                    <p>
+                        Le Pollo Dorado n’a pas toujours été le théâtre des batailles épiques entre l’Empire des Nuggets et les redoutables étudiants Siths. Cette chaîne légendaire, aujourd’hui symbole de chaos intergalactique, est née du rêve improbable de deux personnages tout aussi improbables : Abdou, le visionnaire impitoyable, et Florian, son fidèle – bien que maladroit – associé.
+                    </p>    
+                        
+                     <h3>Les Premiers Pas </h3>
+                    <p>   
+                        Abdou, ancien champion galactique de la friteuse turbo-laser, avait grandi sur une planète où le poulet était plus qu’un simple aliment : c’était une religion.
+                        Porté par un rêve de domination culinaire, il quitta sa planète natale pour conquérir la galaxie, armé de sa recette secrète de nuggets, qu’il prétendait avoir
+                        reçue d’un mystérieux Jedi cuisinier en exil. C’est sur la lune aride de Kentucky Fred Chicken qu’il fit la rencontre de Florian, un chef cuistot talentueux mais en disgrâce après avoir "accidentellement" empoisonné un sénateur galactique avec une crème brûlée au nitroglycérène.    
+                        Florian, cherchant à se racheter ( ou plûtot un plan d'évasion ), accepta de rejoindre Abdou dans sa quête de suprématie culinaire. Ensemble, ils ouvrirent le premier Pollo Dorado, une modeste cantina de poulet, dans un quartier malfamé de Coruscant.
+                    </p>
+                </article>
+                <article >
+                    <img class="restaurant" src="./assets/img/restaurant.png" alt="photo compromettante d'abdou et d'un poussin">
+                </article>
+            </section>  
+            <section class="SketchySlider three slider">
+                <ul class="content">
+                    <li class="item">
+                        <img src="./assets/img/dossier1.png" alt="le dossier sur flo et abdou">
+                    </li>
+                    <li class="item">
+                        <img src="./assets/img/dossier2.png" alt="le dossier sur flo et abdou">
+                    </li>
+                    <li class="item">
+                        <img src="./assets/img/dossier3.png" alt="le dossier sur flo et abdou">
+                    </li>
+                    <li class="item">
+                        <img src="./assets/img/dossier4.png" alt="le dossier sur flo et abdou">
+                    </li>
+                    <li class="item">
+                        <img src="./assets/img/dossier5.png" alt="le dossier sur flo et abdou">
+                    </li>
+                    <li class="item">
+                        <img src="./assets/img/brg6.jpeg" alt="le dossier sur flo et abdou">
+                    </li>
+                    <li class="item">
+                        <img src="./assets/img/censored.png" alt="le dossier sur flo et abdou">
+                    </li>
+                </ul>
+            </section>
+            <section id="team" >
+                <h2>l'équipe :</h2>
+                <div class="team-content">
+                    <article id="rebels">
+                        <h2 class="SketchyTitle cyan" >les rebels:</h2>
+                        <article>
+                            <h3>Abdou</h3>
+                            <img src="./assets/img/img1.png" alt="darth vader">
+                        </article>
+                        <article>
+                            <h3>Florian</h3>
+                            <img  src="./assets/img/flo.png" alt="darth vader">
+                        </article> 
+                    </article>        
+                    <article class="VS">
+                        <h2 class="SketchyTitle orange"> VS </h2>
+                    </article>
+                    <article id="siths">
+                        <h2 class="SketchyTitle cyan">les étudiants siths:</h2>       
+                        <article>
+                            <h3>Darth max</h3>
+                            <img src="./assets/img/max.png" alt="darth max">
+                        </article>   
+                        <article>
+                            <h3>Darth momo</h3>
+                            <img src="./assets/img/momo.png" alt="darth momo">
+                        </article>   
+                        <article>
+                            <h3>Darth rom</h3>
+                            <img src="./assets/img/rom.png" alt="darth rom">
+                        </article>   
+                        <article>
+                            <h3>Darth art</h3>
+                            <img src="./assets/img/art.png" alt="darth art">
+                        </article>   
+                        <article>
+                            <h3>Darth matt</h3>
+                            <img src="./assets/img/matt.png" alt="darth matt">
+                        </article>   
+                        
+                    </article>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <img id="laser" src="assets/img/sabre_laser.png" alt="laser">
+        <div id="icon">    
+            <img src="assets/img/facebook_icon.svg" alt="fb">
+            <img src="assets/img/twitter_icon.svg" alt="twitter">
+            <img src="assets/img/insta_icon.svg" alt="insta">
+        </div>
+        <ul>
+            <li><a href="./index.html">Accueil</a></li>
+            <li><a href="./menus.html">Menu</a></li>
+            <li><a href="./About.html">A propos</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="">CGU</a></li>
+        </ul>
+        <p>© Pollo Dorado</p>
+    </footer>
+</body>
+</html>

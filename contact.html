@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/css/contact.css" rel="stylesheet" />
+    <link href="assets/css/nav_footer.css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <figure>
+                <img id="targetMenu" class="hover_nav" src="assets/img/burger-menu.png" alt="menu">
+                <figcaption >Menu</figcaption>
+                <ul class="hide" id="navbar">
+                    <li><a href="./index.html">Accueil</a></li>
+                    <li><a href="./menus.html">Menu</a></li>   
+                    <li><a href="./About.html">A propos</a></li>
+                    <li><a href="./commande.html">Commander</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </figure>
+            <img id="logo" src="assets/img/logoPouletSansBackground.svg" alt="logo">
+            <figure>
+                <img class="hover_nav" src="assets/img/panier.png" alt="panier">
+                <figcaption>Panier</figcaption>
+            </figure>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Où nous trouver ?</h1>
+            <img class="map" src="assets/img/map.png" alt="map">
+        </section>
+        <section>
+            <h1>Nous contacter :</h1>
+            <form>
+                <ul>
+                    <li>
+                        <label for="first_name">Prénom&nbsp;:</label>
+                        <input type="text" id="first_name" name="user_firstname" />
+                    </li>
+                    <li>
+                        <label for="name">Nom&nbsp;:</label>
+                        <input type="text" id="name" name="user_name" />
+                    </li>
+                    <li>
+                        <label for="mail">E-mail&nbsp;:</label>
+                        <input type="email" id="mail" name="user_mail" />
+                    </li>
+                    <li>
+                        <label for="msg">Message&nbsp;:</label>
+                        <textarea id="msg" name="user_message"></textarea>
+                    </li>
+                    <button type="submit">Envoyer votre message</button>
+                </ul>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <img id="laser" src="assets/img/sabre_laser.png" alt="laser">
+        <div id="icon">    
+            <img src="assets/img/facebook_icon.svg" alt="fb">
+            <img src="assets/img/twitter_icon.svg" alt="twitter">
+            <img src="assets/img/insta_icon.svg" alt="insta">
+        </div>
+        <ul>
+            <li><a href="./index.html">Accueil</a></li>
+            <li><a href="./menus.html">Menu</a></li>
+            <li><a href="./About.html">A propos</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="">CGU</a></li>
+        </ul>
+        <p>© Pollo Dorado</p>
+    </footer>
+    <script src="assets/js/nav.js"></script>
+</body>
+</html>

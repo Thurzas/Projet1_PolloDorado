@@ -1,0 +1,288 @@
+:root {
+    --primary-color:  #26BBE2;
+}
+
+body {
+    background-image: url('../img/background.png');
+    margin: 0;
+    font-family: Orbitron;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        color: #ffbf01ff;
+    }
+
+    section:first-child{
+        opacity: 1;
+        display: flex !important;
+        position: relative;
+    }
+}
+
+main > section {
+    opacity: 0;
+    display: none !important;
+    position: absolute;
+}
+
+.textContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+    z-index:2;
+    color: yellow;
+    font-weight: 600;
+    max-width: 200px;
+    text-wrap: wrap;
+}
+
+.imgHover {
+    transition: 0.5s;
+}
+
+.articles:hover .imgHover {
+    opacity: 0;
+}
+
+.articles:hover .textContent {
+    opacity: 1;
+}
+
+.button-starwars {
+    margin: 10px 0px;
+    background-image: url(../img/background.png); /* Fond noir */
+    color: #fff; /* Texte blanc */
+    font-family: var(--main-typo); /* Police inspirée de Star Wars */
+    font-size: 12px;
+    border: 2px solid #26bbe2; /* Bordure */
+    padding: 10px 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Espacement des lettres pour un effet futuriste */
+    cursor: pointer;
+    position: relative;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.button-starwars:hover {
+    box-shadow: 0 0 10px #26bbe2, 0 0 20px #26bbe2; /* Effet néon */
+    transform: scale(1.05); /* Léger zoom au survol */
+}
+
+.navMenus {
+
+    ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        gap: 5rem;
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+
+        a:hover {
+            /*text-decoration-line: overline underline;*/
+            /*box-shadow: 0 5px 5px #ffbf01ff;*/
+            border: 1px solid var(--primary-color);
+            border-left: none;
+            border-right: none;
+            /*box-shadow: 0 5px 5px #ffbf01ff;*/
+        }
+    }
+
+    hr {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 1370px) {
+    .navMenus {
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+    }
+}
+
+.divFilAriane {
+    display: flex;
+    align-items: baseline;
+}
+
+.filAriane{
+    color: var(--primary-color);
+
+    ul {
+        display: flex;
+        list-style: none;
+        gap: 5px;
+        font-size: 80%;
+        margin-bottom: 50px;
+        padding: 0;
+    }
+
+    li:not(:last-child)::after {
+        display: inline-block;
+        margin: 0 .25rem;
+        content: "→";
+      }
+
+    a {
+        text-decoration: none;
+        color: var(--primary-color)
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+.menuOffresDuMoment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.bandeauMenus {
+    display: flex;
+    justify-content: center;
+    background-image: url('../img/background.jpg');
+    box-shadow: 10px 10px 100px var(--primary-color);
+    border: 3px solid var(--primary-color);
+    border-radius: 50px;
+    width: 80%;
+    max-height: 400px;
+    margin-bottom: 50px;
+    color: white;
+
+    h2 {
+        color: white;
+    }
+}
+
+.firstDivBandeau {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+
+}
+
+.secondDivBandeau {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.thirdDivBandeau {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 1500px) {
+    .bandeauMenus {
+        width: 80%;
+        max-height: 200px;
+        font-size: 14px;
+    }
+
+    .secondDivBandeau {
+        width: 30%;
+    }
+
+    .firstDivBandeau, .thirdDivBandeau {
+        font-size: 12px;
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .bandeauMenus {
+        width: 80%;
+        max-height: 300px;
+        margin-bottom: 20px;
+    }
+
+    .firstDivBandeau, .secondDivBandeau, .thirdDivBandeau {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.titleMain {
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 80%;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    h3 {
+        color: white;
+    }
+}
+
+.articles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../img/background.png');
+    box-shadow: 10px 10px 100px var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 50px;
+    text-align: center;
+    max-width: 337px;
+    min-width: 337px;
+    max-height: 500px;
+    min-height: 400px;
+
+    img {
+        width: 100%;
+    }
+
+    p {
+        margin: 0;
+        font-size: 0.8rem;
+        padding-top: 20px;
+    }
+
+    h3 {
+        font-size: auto;
+    }
+}
+
+.menuMenus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.menuBurgers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
