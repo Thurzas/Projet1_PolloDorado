@@ -8,14 +8,6 @@ body {
     font-family: Orbitron;
 }
 
-header {
-    display: flex;
-    justify-content: center;
-    background-color: #3f3838;
-    padding: 5px;
-    color: white;
-}
-
 main {
     display: flex;
     flex-direction: column;
@@ -28,6 +20,7 @@ main {
     section:first-child{
         opacity: 1;
         display: flex !important;
+        position: relative;
     }
 }
 
@@ -90,7 +83,6 @@ main > section {
         justify-content: center;
         list-style: none;
         gap: 5rem;
-        padding-right: 3rem;
 
         a {
             text-decoration: none;
